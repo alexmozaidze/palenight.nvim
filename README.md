@@ -7,7 +7,7 @@
 </div>
 
 > **Note**
-> This is a maintained fork of [drewtempelmeyer/palenight.vim][original-work]. In the future, Vim support will be dropped!
+> This is a maintained fork of [drewtempelmeyer/palenight.vim][original-work]. In the future, **Vim support will be dropped!**
 
 A dark color scheme for Vim/Neovim based off the [Material Pale Night][material-pale-night] color scheme. Much of the work is based on the lovely [onedark.vim][onedark] color scheme.
 
