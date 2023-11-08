@@ -1,3 +1,5 @@
+<div align="center">
+
 # palenight.vim
 
 ![palenight.vim](demo-screenshot.png)
@@ -73,6 +75,8 @@ let g:palenight_color_overrides = {
 ## Contributors
 
 [The lovely people that have contributed to palenight.vim](https://github.com/drewtempelmeyer/palenight.vim/graphs/contributors)
+
+</div>
 
 [original-work]: https://github.com/drewtempelmeyer/palenight.vim
 [material-pale-night]: https://github.com/equinusocio/material-theme
