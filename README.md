@@ -1,13 +1,15 @@
-![palenight.vim][screenshot]
+# palenight.vim
 
-A dark color scheme for Vim/Neovim based off the [Material Pale Night][materialLink] color scheme. Much of the work is based on the lovely [onedark.vim][onedark] color scheme.
+![palenight.vim](demo-screenshot.png)
+
+> **Note**
+> This is a maintained fork of [drewtempelmeyer/palenight.vim][original-work].
+
+A dark color scheme for Vim/Neovim based off the [Material Pale Night][material-pale-night] color scheme. Much of the work is based on the lovely [onedark.vim][onedark] color scheme.
 
 ## Installation
-Using [vim-plug][vimplug] (modify this to work with your Vim package manager of choice):
 
-```vim
-Plug 'drewtempelmeyer/palenight.vim'
-```
+Simply install the plugin with your favourite plugin manager. No setup required, everything loads automatically!
 
 ## Usage
 
@@ -59,10 +61,7 @@ let g:palenight_terminal_italics=1
 
 ### Overriding Colors
 
-Overriding palenight's colors are supported through setting the
-`g:palenight_color_overrides` variable.  See [palenight.vim](./autoload/palenight.vim)
-for a list of colors that may be overriden.  You must provide `gui`, `cterm`,
-and `cterm16` values for each.
+Overriding palenight's colors are supported through setting the `g:palenight_color_overrides` variable.  See [palenight.vim](./autoload/palenight.vim) for a list of colors that may be overriden.  You must provide `gui`, `cterm`, and `cterm16` values for each.
 
 Example: Overriding the background color to pure black
 ```vim
@@ -75,8 +74,8 @@ let g:palenight_color_overrides = {
 
 [The lovely people that have contributed to palenight.vim](https://github.com/drewtempelmeyer/palenight.vim/graphs/contributors)
 
-[screenshot]: images/screenshot.png
-[materialLink]: https://github.com/equinusocio/material-theme
+[original-work]: https://github.com/drewtempelmeyer/palenight.vim
+[material-pale-night]: https://github.com/equinusocio/material-theme
 [onedark]: https://github.com/joshdick/onedark.vim
 [vimplug]: https://github.com/junegunn/vim-plug
 [firaCode]: https://github.com/tonsky/FiraCode
