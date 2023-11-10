@@ -1,0 +1,2 @@
+
+ return {red = "#ff5370", light_red = "#ff869a", dark_red = "#BE5046", green = "#C3E88D", yellow = "#ffcb6b", dark_yellow = "#F78C6C", blue = "#82b1ff", purple = "#c792ea", blue_purple = "#939ede", cyan = "#89DDFF", white = "#bfc7d5", black = "#292D3E", visual_black = "NONE", comment_grey = "#697098", gutter_fg_grey = "#4B5263", cursor_grey = "#2C323C", visual_grey = "#3E4452", menu_grey = "#3E4452", special_grey = "#3B4048", vertsplit = "#181A1F", white_mask_1 = "#333747", white_mask_3 = "#474b59", white_mask_11 = "#989aa2"}
