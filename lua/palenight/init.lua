@@ -23,7 +23,6 @@
  if colorscheme_loaded_3f then
  vim.cmd.hi("clear") else end end vim.g.colors_name = "palenight"
 
-
  local groups = require("palenight/groups")
  for _, group in ipairs(groups) do
  local hl = group.hl
