@@ -23,7 +23,6 @@
     (when colorscheme-loaded?
       (vim.cmd.hi :clear)))
   (set vim.g.colors_name :palenight)
-  ;; FIX: Confusing naming. Change group to hl.
   (let [groups (require :palenight/groups)]
     (each [_ group (ipairs groups)]
       (local hl group.hl)
