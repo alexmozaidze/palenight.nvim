@@ -22,4 +22,4 @@ build-commit: clean build
 	git add lua
 	git commit -m 'chore: generated lua'
 
-.PHONY: default clean
+.PHONY: default clean build build-commit
