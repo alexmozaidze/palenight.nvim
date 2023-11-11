@@ -2,12 +2,13 @@ ifndef VERBOSE
 .SILENT:
 endif
 
-MACROS_DIR := macros
-FENNEL_OPTS := --correlate --use-bit-lib --add-macro-path $(MACROS_DIR)
+FENNEL_OPTS := --correlate --add-macro-path 'macros/?.fnl'
 SRC_FILES := $(wildcard fnl/*.fnl fnl/**/*.fnl)
 OUT_FILES := $(patsubst fnl/%.fnl,lua/%.lua,$(SRC_FILES))
 
-default: clean $(OUT_FILES)
+default: clean build
+
+build: $(OUT_FILES)
 	echo "Generated: $(OUT_FILES)"
 
 clean:
@@ -16,5 +17,9 @@ clean:
 lua/%.lua: fnl/%.fnl
 	mkdir -p "$$(dirname $@)"
 	fennel $(FENNEL_OPTS) -c $< > $@
+
+build-commit: clean build
+	git add lua
+	git commit -m 'chore: generated lua'
 
 .PHONY: default clean
