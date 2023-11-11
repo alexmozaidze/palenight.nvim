@@ -61,6 +61,7 @@ Many plugins are supported, the most important ones being:
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [rainbow-delimiters.nvim](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
 For full list of supported plugins, see [groups.fnl](fnl/palenight/groups.fnl#L340).
 
