@@ -384,6 +384,7 @@
  {:hl :GitSignsAdd :fg c.green}
  {:hl :GitSignsChange :fg c.yellow}
  {:hl :GitSignsDelete :fg c.red}
+ {:hl :GitSignsCurrentLineBlame :fg c.comment_grey}
  ;; Tree-sitter
  {:hl "@annotation" :fg c.yellow}
  {:hl "@attribute" :fg c.light_red}
