@@ -380,6 +380,10 @@
  {:hl :RainbowDelimiterGreen :fg c.green}
  {:hl :RainbowDelimiterViolet :fg c.purple}
  {:hl :RainbowDelimiterCyan :fg c.cyan}
+ ;; lewis6991/gitsigns.nvim
+ {:hl :GitSignsAdd :fg c.green}
+ {:hl :GitSignsChange :fg c.yellow}
+ {:hl :GitSignsDelete :fg c.red}
  ;; Tree-sitter
  {:hl "@annotation" :fg c.yellow}
  {:hl "@attribute" :fg c.light_red}
@@ -465,4 +469,18 @@
  {:hl :gitcommitSelected :link :gitcommitComment}
  {:hl :gitcommitDiscardedArrow :link :gitcommitDiscardedFile}
  {:hl :gitcommitSelectedArrow :link :gitcommitSelectedFile}
- {:hl :gitcommitUnmergedArrow :link :gitcommitUnmergedFile}]
+ {:hl :gitcommitUnmergedArrow :link :gitcommitUnmergedFile}
+ ;; LSP
+ {:hl :DiagnosticError :fg c.red}
+ {:hl :DiagnosticWarn :fg c.yellow}
+ {:hl :DiagnosticInfo :fg c.white}
+ {:hl :DiagnosticHint :fg c.comment_grey}
+ {:hl :DiagnosticVirtualTextError :fg c.red}
+ {:hl :DiagnosticVirtualTextWarn :fg c.yellow}
+ {:hl :DiagnosticVirtualTextInfo :fg c.white}
+ {:hl :DiagnosticVirtualTextHint :fg c.comment_grey}
+ {:hl :DiagnosticUnderlineError :fg c.red :underline true}
+ {:hl :DiagnosticUnderlineWarn :fg c.yellow :underline true}
+ {:hl :DiagnosticUnderlineInfo :fg c.white :underline true}
+ {:hl :DiagnosticUnderlineHint :fg c.comment_grey :underline true}
+ ]
