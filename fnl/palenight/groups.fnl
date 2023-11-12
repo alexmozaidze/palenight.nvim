@@ -337,6 +337,12 @@
  {:hl :dartOperator :fg c.purple}
  {:hl :dartMetadata :fg c.purple}
  {:hl :dartKeyword :fg c.purple}
+ ;; Gitconfig
+ {:hl :gitconfigSection :fg c.yellow}
+ {:hl :gitconfigVariable :fg c.cyan}
+ {:hl :gitconfigAssignment :fg c.green}
+ {:hl :gitConfigString :fg c.green}
+ {:hl :gitConfigEscape :fg c.comment_grey}
  ;; Plugin highlighting
  ;; airblade/vim-gitgutter
  {:hl :GitGutterAdd :link :SignifySignAdd}
