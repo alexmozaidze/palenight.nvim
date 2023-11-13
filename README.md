@@ -2,14 +2,14 @@
 
 # palenight.vim
 
-![palenight.vim](demo-screenshot.png)
+![palenight.nvim](demo-screenshot.png)
 
 </div>
 
 > **Note**
 > This is a maintained hard fork of [drewtempelmeyer/palenight.vim][original-work].
 
-A dark color scheme for Neovim based off the [Material Pale Night][material-pale-night] color scheme. Much of the work is based on the lovely [onedark.vim][onedark] color scheme.
+Dark palenight colorscheme written in [Fennel][fennel] with full support for Tree-sitter, LSP (including semantic highlighting), and [lots of plugins](#plugin-support).
 
 ## Requirements
 
@@ -91,6 +91,16 @@ autocmd("ColorScheme", {
 For list of available colors check out [colors.fnl][colors].  
 Also check out `:help nvim_set_hl()` and `:help nvim_create_autocmd()`.
 
+---
+
+If you want to change the *internal color table* - you can, but I don't know why you'd want this. Here's an example
+```lua
+-- IMPORTANT! This must be done before colorscheme is loaded.
+local colors = require "palenight/colors"
+colors.comment = "#ff00ff"
+```
+
+[fennel]: https://fennel-lang.org/
 [ibl]: https://github.com/lukas-reineke/indent-blankline.nvim
 [gitsigns]: https://github.com/lewis6991/gitsigns.nvim
 [rainbow-delimiters]: https://gitlab.com/HiPhish/rainbow-delimiters.nvim
@@ -98,7 +108,5 @@ Also check out `:help nvim_set_hl()` and `:help nvim_create_autocmd()`.
 [tree-sitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [colors]: fnl/palenight/colors.fnl
 [original-work]: https://github.com/drewtempelmeyer/palenight.vim
-[material-pale-night]: https://github.com/equinusocio/material-theme
-[onedark]: https://github.com/joshdick/onedark.vim
 [vimplug]: https://github.com/junegunn/vim-plug
 [firaCode]: https://github.com/tonsky/FiraCode
