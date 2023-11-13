@@ -455,6 +455,26 @@
  {:hl "@type.qualifier" :fg c.yellow}
  {:hl "@variable" :fg c.white}
  {:hl "@variable.builtin" :fg c.orange}
+ ;; LSP Semantic Highlight
+ {:hl "@lsp.type.variable" :fg c.white}
+ {:hl "@lsp.type.typeParameter"}
+ {:hl "@lsp.type.enum" :fg c.yellow}
+ {:hl "@lsp.type.enumMember" :fg c.cyan}
+ {:hl "@lsp.type.parameter" :fg c.orange}
+ {:hl "@lsp.type.namespace" :fg c.white}
+ {:hl "@lsp.type.interface" :fg c.yellow}
+ {:hl "@lsp.type.decorator" :fg c.yellow}
+ {:hl "@lsp.type.property" :fg c.dark_green}
+ {:hl "@lsp.type.function" :fg c.blue}
+ {:hl "@lsp.type.comment" :fg c.comment_grey}
+ {:hl "@lsp.type.class" :fg c.yellow}
+ {:hl "@lsp.type.struct" :fg c.yellow}
+ {:hl "@lsp.type.method" :fg c.blue}
+ {:hl "@lsp.type.macro" :fg c.purple}
+ {:hl "@lsp.type.type" :fg c.yellow}
+ ;; NOTE: unresolvedReference applies to Rust, and, hopefuly, works for other LSP servers.
+ {:hl "@lsp.type.unresolvedReference" :fg c.red :underline true}
+ {:hl "@lsp.mod.defaultLibrary.lua" :fg c.blue_purple}
  ;; Git highlighting
  {:hl :gitcommitComment :fg c.comment_grey}
  {:hl :gitcommitUnmerged :fg c.green}
