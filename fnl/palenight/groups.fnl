@@ -1,519 +1,519 @@
 (local c (require :palenight/colors))
 
-[;; Syntax Groups
- {:hl :Comment :fg c.comment :italic true}
- {:hl :Constant :fg c.cyan}
- {:hl :String :fg c.green}
- {:hl :Character :fg c.green}
- {:hl :Number :fg c.orange}
- {:hl :Boolean :fg c.red}
- {:hl :Float :fg c.orange}
- {:hl :Identifier :fg c.red}
- {:hl :Function :fg c.blue}
- {:hl :Statement :fg c.purple}
- {:hl :Conditional :fg c.purple}
- {:hl :Repeat :fg c.purple}
- {:hl :Label :fg c.purple}
- {:hl :Operator :fg c.cyan}
- {:hl :Keyword :fg c.red}
- {:hl :Exception :fg c.purple}
- {:hl :PreProc :fg c.yellow}
- {:hl :Include :fg c.blue}
- {:hl :Define :fg c.purple}
- {:hl :Macro :fg c.purple}
- {:hl :PreCondit :fg c.yellow}
- {:hl :Type :fg c.yellow}
- {:hl :StorageClass :fg c.yellow}
- {:hl :Structure :fg c.yellow}
- {:hl :Typedef :fg c.yellow}
- {:hl :Special :fg c.blue}
- {:hl :SpecialChar}
- {:hl :Tag}
- {:hl :Delimiter}
- {:hl :SpecialComment :fg c.special}
- {:hl :Debug}
- {:hl :Underlined :underline true}
- {:hl :Ignore}
- {:hl :Error :fg c.red}
- {:hl :Todo :fg c.purple}
+{;; Syntax Groups
+ :Comment {:fg c.comment :italic true}
+ :Constant {:fg c.cyan}
+ :String {:fg c.green}
+ :Character {:fg c.green}
+ :Number {:fg c.orange}
+ :Boolean {:fg c.red}
+ :Float {:fg c.orange}
+ :Identifier {:fg c.red}
+ :Function {:fg c.blue}
+ :Statement {:fg c.purple}
+ :Conditional {:fg c.purple}
+ :Repeat {:fg c.purple}
+ :Label {:fg c.purple}
+ :Operator {:fg c.cyan}
+ :Keyword {:fg c.red}
+ :Exception {:fg c.purple}
+ :PreProc {:fg c.yellow}
+ :Include {:fg c.blue}
+ :Define {:fg c.purple}
+ :Macro {:fg c.purple}
+ :PreCondit {:fg c.yellow}
+ :Type {:fg c.yellow}
+ :StorageClass {:fg c.yellow}
+ :Structure {:fg c.yellow}
+ :Typedef {:fg c.yellow}
+ :Special {:fg c.blue}
+ :SpecialChar {}
+ :Tag {}
+ :Delimiter {}
+ :SpecialComment {:fg c.special}
+ :Debug {}
+ :Underlined {:underline true}
+ :Ignore {}
+ :Error {:fg c.red}
+ :Todo {:fg c.purple}
  ;; Highlight hls
- {:hl :ColorColumn :bg c.cursor}
- {:hl :Conceal}
- {:hl :Cursor :fg c.black :bg c.blue}
- {:hl :CursorIM}
- {:hl :CursorColumn :bg c.cursor}
- {:hl :CursorLine :bg c.cursor}
- {:hl :Directory :fg c.blue}
- {:hl :DiffAdd :bg c.green :fg c.black}
- {:hl :DiffChange :bg c.yellow :fg c.black}
- {:hl :DiffDelete :bg c.red :fg c.black}
- {:hl :DiffText :bg c.black :fg c.yellow}
- {:hl :ErrorMsg :fg c.red}
- {:hl :VertSplit :fg c.vertsplit}
- {:hl :Folded :bg c.cursor :fg c.comment}
- {:hl :FoldColumn}
- {:hl :SignColumn}
- {:hl :IncSearch :fg c.yellow :bg c.comment}
- {:hl :LineNr :fg c.line_number}
- {:hl :CursorLineNr}
- {:hl :MatchParen :fg c.blue :underline true}
- {:hl :ModeMsg}
- {:hl :MoreMsg}
- {:hl :NonText :fg c.comment}
- {:hl :Normal :fg c.white :bg c.black}
- {:hl :Pmenu :bg c.menu}
- {:hl :PmenuSel :fg c.black :bg c.blue}
- {:hl :PmenuSbar :bg c.special}
- {:hl :PmenuThumb :bg c.white}
- {:hl :Question :fg c.purple}
- {:hl :Search :fg c.black :bg c.yellow}
- {:hl :SpecialKey :fg c.special}
- {:hl :SpellBad :fg c.red :underline true}
- {:hl :SpellCap :fg c.orange}
- {:hl :SpellLocal :fg c.orange}
- {:hl :SpellRare :fg c.orange}
- {:hl :StatusLine :fg c.white :bg c.cursor}
- {:hl :StatusLineNC :fg c.comment}
- {:hl :TabLine :fg c.comment}
- {:hl :TabLineFill}
- {:hl :TabLineSel :fg c.white}
- {:hl :Title :fg c.green}
- {:hl :Visual :bg c.highlight}
- {:hl :VisualNOS :bg c.highlight}
- {:hl :WarningMsg :fg c.yellow}
- {:hl :WildMenu :fg c.black :bg c.blue}
+ :ColorColumn {:bg c.cursor}
+ :Conceal {}
+ :Cursor {:fg c.black :bg c.blue}
+ :CursorIM {}
+ :CursorColumn {:bg c.cursor}
+ :CursorLine {:bg c.cursor}
+ :Directory {:fg c.blue}
+ :DiffAdd {:bg c.green :fg c.black}
+ :DiffChange {:bg c.yellow :fg c.black}
+ :DiffDelete {:bg c.red :fg c.black}
+ :DiffText {:bg c.black :fg c.yellow}
+ :ErrorMsg {:fg c.red}
+ :VertSplit {:fg c.vertsplit}
+ :Folded {:bg c.cursor :fg c.comment}
+ :FoldColumn {}
+ :SignColumn {}
+ :IncSearch {:fg c.yellow :bg c.comment}
+ :LineNr {:fg c.line_number}
+ :CursorLineNr {}
+ :MatchParen {:fg c.blue :underline true}
+ :ModeMsg {}
+ :MoreMsg {}
+ :NonText {:fg c.comment}
+ :Normal {:fg c.white :bg c.black}
+ :Pmenu {:bg c.menu}
+ :PmenuSel {:fg c.black :bg c.blue}
+ :PmenuSbar {:bg c.special}
+ :PmenuThumb {:bg c.white}
+ :Question {:fg c.purple}
+ :Search {:fg c.black :bg c.yellow}
+ :SpecialKey {:fg c.special}
+ :SpellBad {:fg c.red :underline true}
+ :SpellCap {:fg c.orange}
+ :SpellLocal {:fg c.orange}
+ :SpellRare {:fg c.orange}
+ :StatusLine {:fg c.white :bg c.cursor}
+ :StatusLineNC {:fg c.comment}
+ :TabLine {:fg c.comment}
+ :TabLineFill {}
+ :TabLineSel {:fg c.white}
+ :Title {:fg c.green}
+ :Visual {:bg c.highlight}
+ :VisualNOS {:bg c.highlight}
+ :WarningMsg {:fg c.yellow}
+ :WildMenu {:fg c.black :bg c.blue}
  ;; Language-specific hls
  ;; Docker
- {:hl :dockerfileKeyword :fg c.purple}
+ :dockerfileKeyword {:fg c.purple}
  ;; Shell
- {:hl :shSet :fg c.cyan}
- {:hl :shSetOption :fg c.white}
- {:hl :shStatement :fg c.cyan}
- {:hl :shFunctionKey :fg c.purple}
+ :shSet {:fg c.cyan}
+ :shSetOption {:fg c.white}
+ :shStatement {:fg c.cyan}
+ :shFunctionKey {:fg c.purple}
  ;; CSS
- {:hl :cssAttrComma :fg c.purple}
- {:hl :cssAttributeSelector :fg c.green}
- {:hl :cssBraces :fg c.white}
- {:hl :cssClassName :fg c.orange}
- {:hl :cssClassNameDot :fg c.orange}
- {:hl :cssDefinition :fg c.purple}
- {:hl :cssFontAttr :fg c.orange}
- {:hl :cssFontDescriptor :fg c.purple}
- {:hl :cssFunctionName :fg c.blue}
- {:hl :cssIdentifier :fg c.blue}
- {:hl :cssImportant :fg c.purple}
- {:hl :cssInclude :fg c.white}
- {:hl :cssIncludeKeyword :fg c.purple}
- {:hl :cssMediaType :fg c.orange}
- {:hl :cssProp :fg c.white}
- {:hl :cssPseudoClassId :fg c.orange}
- {:hl :cssSelectorOp :fg c.purple}
- {:hl :cssSelectorOp2 :fg c.purple}
- {:hl :cssTagName :fg c.red}
+ :cssAttrComma {:fg c.purple}
+ :cssAttributeSelector {:fg c.green}
+ :cssBraces {:fg c.white}
+ :cssClassName {:fg c.orange}
+ :cssClassNameDot {:fg c.orange}
+ :cssDefinition {:fg c.purple}
+ :cssFontAttr {:fg c.orange}
+ :cssFontDescriptor {:fg c.purple}
+ :cssFunctionName {:fg c.blue}
+ :cssIdentifier {:fg c.blue}
+ :cssImportant {:fg c.purple}
+ :cssInclude {:fg c.white}
+ :cssIncludeKeyword {:fg c.purple}
+ :cssMediaType {:fg c.orange}
+ :cssProp {:fg c.white}
+ :cssPseudoClassId {:fg c.orange}
+ :cssSelectorOp {:fg c.purple}
+ :cssSelectorOp2 {:fg c.purple}
+ :cssTagName {:fg c.red}
  ;; Go
- {:hl :goDeclaration :fg c.purple}
+ :goDeclaration {:fg c.purple}
  ;; HTML
- {:hl :htmlTitle :fg c.white}
- {:hl :htmlArg :fg c.yellow}
- {:hl :htmlEndTag :fg c.cyan}
- {:hl :htmlH1 :fg c.white}
- {:hl :htmlLink :fg c.purple}
- {:hl :htmlSpecialChar :fg c.orange}
- {:hl :htmlSpecialTagName :fg c.red}
- {:hl :htmlTag :fg c.cyan}
- {:hl :htmlTagName :fg c.red}
+ :htmlTitle {:fg c.white}
+ :htmlArg {:fg c.yellow}
+ :htmlEndTag {:fg c.cyan}
+ :htmlH1 {:fg c.white}
+ :htmlLink {:fg c.purple}
+ :htmlSpecialChar {:fg c.orange}
+ :htmlSpecialTagName {:fg c.red}
+ :htmlTag {:fg c.cyan}
+ :htmlTagName {:fg c.red}
  ;; Coffeescript
- {:hl :coffeeExtendedOp :fg c.purple}
+ :coffeeExtendedOp {:fg c.purple}
  ;; JavaScript
- {:hl :javaScriptBraces :fg c.white}
- {:hl :javaScriptFunction :fg c.purple}
- {:hl :javaScriptIdentifier :fg c.purple}
- {:hl :javaScriptNull :fg c.orange}
- {:hl :javaScriptNumber :fg c.orange}
- {:hl :javaScriptRequire :fg c.cyan}
- {:hl :javaScriptReserved :fg c.purple}
+ :javaScriptBraces {:fg c.white}
+ :javaScriptFunction {:fg c.purple}
+ :javaScriptIdentifier {:fg c.purple}
+ :javaScriptNull {:fg c.orange}
+ :javaScriptNumber {:fg c.orange}
+ :javaScriptRequire {:fg c.cyan}
+ :javaScriptReserved {:fg c.purple}
  ;; https://github.com/pangloss/vim-javascript
- {:hl :jsArrowFunction :fg c.purple}
- {:hl :jsClassKeyword :fg c.purple}
- {:hl :jsClassDefinition :fg c.yellow}
- {:hl :jsClassMethodType :fg c.purple}
- {:hl :jsClassFuncName :fg c.blue}
- {:hl :jsDestructuringBlock :fg c.blue}
- {:hl :jsDocParam :fg c.blue}
- {:hl :jsDocTags :fg c.purple}
- {:hl :jsExport :fg c.purple}
- {:hl :jsExportDefault :fg c.red}
- {:hl :jsExtendsKeyword :fg c.purple}
- {:hl :jsConditional :fg c.purple}
- {:hl :jsOperator :fg c.purple}
- {:hl :jsFrom :fg c.purple}
- {:hl :jsFuncArgs :fg c.blue}
- {:hl :jsFuncCall :fg c.blue}
- {:hl :jsFuncName :fg c.blue}
- {:hl :jsObjectProp :fg c.cyan}
- {:hl :jsFunction :fg c.purple}
- {:hl :jsGenerator :fg c.yellow}
- {:hl :jsGlobalObjects :fg c.yellow}
- {:hl :jsImport :fg c.purple}
- {:hl :jsModuleAs :fg c.purple}
- {:hl :jsModuleWords :fg c.purple}
- {:hl :jsModuleKeyword :fg c.blue}
- {:hl :jsModules :fg c.purple}
- {:hl :jsNull :fg c.orange}
- {:hl :jsStorageClass :fg c.purple}
- {:hl :jsSuper :fg c.red}
- {:hl :jsTemplateBraces :fg c.dark_red}
- {:hl :jsTemplateVar :fg c.green}
- {:hl :jsThis :fg c.red}
- {:hl :jsUndefined :fg c.orange}
- ;; {:hl :jsVariableDef :fg c.blue}
+ :jsArrowFunction {:fg c.purple}
+ :jsClassKeyword {:fg c.purple}
+ :jsClassDefinition {:fg c.yellow}
+ :jsClassMethodType {:fg c.purple}
+ :jsClassFuncName {:fg c.blue}
+ :jsDestructuringBlock {:fg c.blue}
+ :jsDocParam {:fg c.blue}
+ :jsDocTags {:fg c.purple}
+ :jsExport {:fg c.purple}
+ :jsExportDefault {:fg c.red}
+ :jsExtendsKeyword {:fg c.purple}
+ :jsConditional {:fg c.purple}
+ :jsOperator {:fg c.purple}
+ :jsFrom {:fg c.purple}
+ :jsFuncArgs {:fg c.blue}
+ :jsFuncCall {:fg c.blue}
+ :jsFuncName {:fg c.blue}
+ :jsObjectProp {:fg c.cyan}
+ :jsFunction {:fg c.purple}
+ :jsGenerator {:fg c.yellow}
+ :jsGlobalObjects {:fg c.yellow}
+ :jsImport {:fg c.purple}
+ :jsModuleAs {:fg c.purple}
+ :jsModuleWords {:fg c.purple}
+ :jsModuleKeyword {:fg c.blue}
+ :jsModules {:fg c.purple}
+ :jsNull {:fg c.orange}
+ :jsStorageClass {:fg c.purple}
+ :jsSuper {:fg c.red}
+ :jsTemplateBraces {:fg c.dark_red}
+ :jsTemplateVar {:fg c.green}
+ :jsThis {:fg c.red}
+ :jsUndefined {:fg c.orange}
+ ;; :jsVariableDef {:fg c.blue}
  ;; https://github.com/othree/yajs.vim
- {:hl :javascriptArrowFunc :fg c.purple}
- {:hl :javascriptClassExtends :fg c.purple}
- {:hl :javascriptClassKeyword :fg c.purple}
- {:hl :javascriptDocNotation :fg c.purple}
- {:hl :javascriptDocParamName :fg c.blue}
- {:hl :javascriptDocTags :fg c.purple}
- {:hl :javascriptEndColons :fg c.white}
- {:hl :javascriptExport :fg c.purple}
- {:hl :javascriptFuncArg :fg c.white}
- {:hl :javascriptFuncKeyword :fg c.purple}
- {:hl :javascriptIdentifier :fg c.red}
- {:hl :javascriptImport :fg c.purple}
- {:hl :javascriptMethodName :fg c.white}
- {:hl :javascriptObjectLabel :fg c.white}
- {:hl :javascriptOpSymbol :fg c.cyan}
- {:hl :javascriptOpSymbols :fg c.cyan}
- {:hl :javascriptPropertyName :fg c.green}
- {:hl :javascriptTemplateSB :fg c.dark_red}
- {:hl :javascriptVariable :fg c.purple}
+ :javascriptArrowFunc {:fg c.purple}
+ :javascriptClassExtends {:fg c.purple}
+ :javascriptClassKeyword {:fg c.purple}
+ :javascriptDocNotation {:fg c.purple}
+ :javascriptDocParamName {:fg c.blue}
+ :javascriptDocTags {:fg c.purple}
+ :javascriptEndColons {:fg c.white}
+ :javascriptExport {:fg c.purple}
+ :javascriptFuncArg {:fg c.white}
+ :javascriptFuncKeyword {:fg c.purple}
+ :javascriptIdentifier {:fg c.red}
+ :javascriptImport {:fg c.purple}
+ :javascriptMethodName {:fg c.white}
+ :javascriptObjectLabel {:fg c.white}
+ :javascriptOpSymbol {:fg c.cyan}
+ :javascriptOpSymbols {:fg c.cyan}
+ :javascriptPropertyName {:fg c.green}
+ :javascriptTemplateSB {:fg c.dark_red}
+ :javascriptVariable {:fg c.purple}
  ;; JSON
- {:hl :jsonCommentError :fg c.white}
- {:hl :jsonKeyword :fg c.blue}
- {:hl :jsonBoolean :fg c.red}
- {:hl :jsonNumber :fg c.orange}
- {:hl :jsonQuote :fg c.white}
- {:hl :jsonMissingCommaError :fg c.red :underline true}
- {:hl :jsonNoQuotesError :fg c.red :underline true}
- {:hl :jsonNumError :fg c.red :underline true}
- {:hl :jsonString :fg c.green}
- {:hl :jsonStringSQError :fg c.red :underline true}
- {:hl :jsonSemicolonError :fg c.red :underline true}
+ :jsonCommentError {:fg c.white}
+ :jsonKeyword {:fg c.blue}
+ :jsonBoolean {:fg c.red}
+ :jsonNumber {:fg c.orange}
+ :jsonQuote {:fg c.white}
+ :jsonMissingCommaError {:fg c.red :underline true}
+ :jsonNoQuotesError {:fg c.red :underline true}
+ :jsonNumError {:fg c.red :underline true}
+ :jsonString {:fg c.green}
+ :jsonStringSQError {:fg c.red :underline true}
+ :jsonSemicolonError {:fg c.red :underline true}
  ;; Markdown
- {:hl :markdownCode :fg c.green}
- {:hl :markdownLinkReference :fg c.comment}
- {:hl :markdownJekyllFrontMatter :fg c.comment}
- {:hl :markdownCodeBlock :fg c.green}
- {:hl :markdownCodeDelimiter :fg c.green}
- {:hl :markdownHeadingDelimiter :fg c.red}
- {:hl :markdownRule :fg c.comment}
- {:hl :markdownHeadingRule :fg c.comment}
- {:hl :htmlH1 :fg c.blue}
- {:hl :htmlH2 :fg c.blue}
- {:hl :htmlH3 :fg c.blue}
- {:hl :htmlH4 :fg c.blue}
- {:hl :htmlH5 :fg c.blue}
- {:hl :htmlH6 :fg c.blue}
- {:hl :mkdDelimiter :fg c.cyan}
- {:hl :markdownId :fg c.purple}
- {:hl :markdownBlockquote :fg c.comment}
- {:hl :markdownItalic :fg c.purple :italic true}
- {:hl :mkdBold :fg c.yellow :bold true}
- {:hl :mkdInlineURL :fg c.light_red}
- {:hl :mkdListItem :fg c.yellow}
- {:hl :markdownOrderedListMarker :fg c.red}
- {:hl :markdownIdDeclaration :fg c.blue}
- {:hl :mkdLink :fg c.white}
- {:hl :markdownLinkDelimiter :fg c.white}
- {:hl :mkdURL :fg c.light_red}
+ :markdownCode {:fg c.green}
+ :markdownLinkReference {:fg c.comment}
+ :markdownJekyllFrontMatter {:fg c.comment}
+ :markdownCodeBlock {:fg c.green}
+ :markdownCodeDelimiter {:fg c.green}
+ :markdownHeadingDelimiter {:fg c.red}
+ :markdownRule {:fg c.comment}
+ :markdownHeadingRule {:fg c.comment}
+ :htmlH1 {:fg c.blue}
+ :htmlH2 {:fg c.blue}
+ :htmlH3 {:fg c.blue}
+ :htmlH4 {:fg c.blue}
+ :htmlH5 {:fg c.blue}
+ :htmlH6 {:fg c.blue}
+ :mkdDelimiter {:fg c.cyan}
+ :markdownId {:fg c.purple}
+ :markdownBlockquote {:fg c.comment}
+ :markdownItalic {:fg c.purple :italic true}
+ :mkdBold {:fg c.yellow :bold true}
+ :mkdInlineURL {:fg c.light_red}
+ :mkdListItem {:fg c.yellow}
+ :markdownOrderedListMarker {:fg c.red}
+ :markdownIdDeclaration {:fg c.blue}
+ :mkdLink {:fg c.white}
+ :markdownLinkDelimiter {:fg c.white}
+ :mkdURL {:fg c.light_red}
  ;; Ruby
- {:hl :rubyAccess :fg c.cyan}
- {:hl :rubyBlockParameter :fg c.yellow}
- {:hl :rubyBlockParameterList :fg c.white}
- {:hl :rubyBoolean :fg c.red}
- {:hl :rubyCapitalizedMethod :fg c.blue}
- {:hl :rubyClass :fg c.purple}
- {:hl :rubyClassName :fg c.yellow}
- {:hl :rubyConstant :fg c.yellow}
- {:hl :rubyControl :fg c.purple}
- {:hl :rubyEscape :fg c.red}
- {:hl :rubyFunction :fg c.blue}
- {:hl :rubyGlobalVariable :fg c.red}
- {:hl :rubyInclude :fg c.cyan}
- {:hl :rubyIncluderubyGlobalVariable :fg c.red}
- {:hl :rubyInstanceVariable :fg c.red}
- {:hl :rubyInterpolation :fg c.cyan}
- {:hl :rubyInterpolationDelimiter :fg c.red}
- {:hl :rubyModuleName :fg c.white}
- {:hl :rubyKeyword :fg c.purple}
- {:hl :rubyKeywordAsMethod :fg c.cyan}
- {:hl :rubyOperator :fg c.purple}
- {:hl :rubyPredefinedConstant :fg c.yellow}
- {:hl :rubyPseudoVariable :fg c.blue}
- {:hl :rubyRegexp :fg c.white}
- {:hl :rubyRegexpDelimiter :fg c.cyan}
- {:hl :rubySharpBang :fg c.comment}
- {:hl :rubyStringDelimiter :fg c.green}
- {:hl :rubySymbol :fg c.blue}
+ :rubyAccess {:fg c.cyan}
+ :rubyBlockParameter {:fg c.yellow}
+ :rubyBlockParameterList {:fg c.white}
+ :rubyBoolean {:fg c.red}
+ :rubyCapitalizedMethod {:fg c.blue}
+ :rubyClass {:fg c.purple}
+ :rubyClassName {:fg c.yellow}
+ :rubyConstant {:fg c.yellow}
+ :rubyControl {:fg c.purple}
+ :rubyEscape {:fg c.red}
+ :rubyFunction {:fg c.blue}
+ :rubyGlobalVariable {:fg c.red}
+ :rubyInclude {:fg c.cyan}
+ :rubyIncluderubyGlobalVariable {:fg c.red}
+ :rubyInstanceVariable {:fg c.red}
+ :rubyInterpolation {:fg c.cyan}
+ :rubyInterpolationDelimiter {:fg c.red}
+ :rubyModuleName {:fg c.white}
+ :rubyKeyword {:fg c.purple}
+ :rubyKeywordAsMethod {:fg c.cyan}
+ :rubyOperator {:fg c.purple}
+ :rubyPredefinedConstant {:fg c.yellow}
+ :rubyPseudoVariable {:fg c.blue}
+ :rubyRegexp {:fg c.white}
+ :rubyRegexpDelimiter {:fg c.cyan}
+ :rubySharpBang {:fg c.comment}
+ :rubyStringDelimiter {:fg c.green}
+ :rubySymbol {:fg c.blue}
  ;; ERb
- {:hl :erubyDelimiter :fg c.red}
+ :erubyDelimiter {:fg c.red}
  ;; Rails
- {:hl :railsAssetPreProc :fg c.comment}
- {:hl :railsAssetInclude :fg c.comment}
- {:hl :railsAssetIncluded :fg c.comment}
- {:hl :rubyRailsMethod :fg c.blue}
- {:hl :rubyRailsFilterMethod :fg c.cyan}
- {:hl :rubyRailsRenderMethod :fg c.cyan}
- {:hl :rubyRailsARAssociationMethod :fg c.cyan}
- {:hl :rubyRailsHelperMethod :fg c.cyan}
+ :railsAssetPreProc {:fg c.comment}
+ :railsAssetInclude {:fg c.comment}
+ :railsAssetIncluded {:fg c.comment}
+ :rubyRailsMethod {:fg c.blue}
+ :rubyRailsFilterMethod {:fg c.cyan}
+ :rubyRailsRenderMethod {:fg c.cyan}
+ :rubyRailsARAssociationMethod {:fg c.cyan}
+ :rubyRailsHelperMethod {:fg c.cyan}
  ;; RSpec
- {:hl :rspecGroupMethods :fg c.white}
- {:hl :rspecBeforeAndAfter :fg c.white}
+ :rspecGroupMethods {:fg c.white}
+ :rspecBeforeAndAfter {:fg c.white}
  ;; CSS
- {:hl :cssColor :fg c.orange}
- {:hl :cssCommonAttr :fg c.blue}
- {:hl :cssProp :fg c.cyan}
- {:hl :cssSelectorOp :fg c.white}
- {:hl :cssUnitDecorators :fg c.yellow}
+ :cssColor {:fg c.orange}
+ :cssCommonAttr {:fg c.blue}
+ :cssProp {:fg c.cyan}
+ :cssSelectorOp {:fg c.white}
+ :cssUnitDecorators {:fg c.yellow}
  ;; Sass
  ;; https://github.com/tpope/vim-haml
- {:hl :sassAmpersand :fg c.red}
- {:hl :sassClass :fg c.orange}
- {:hl :sassControl :fg c.purple}
- {:hl :sassExtend :fg c.purple}
- {:hl :sassFor :fg c.white}
- {:hl :sassFunction :fg c.cyan}
- {:hl :sassId :fg c.blue}
- {:hl :sassInclude :fg c.purple}
- {:hl :sassMedia :fg c.purple}
- {:hl :sassMediaOperators :fg c.white}
- {:hl :sassMixin :fg c.purple}
- {:hl :sassMixinName :fg c.blue}
- {:hl :sassMixing :fg c.purple}
- {:hl :sassVariable :fg c.orange}
+ :sassAmpersand {:fg c.red}
+ :sassClass {:fg c.orange}
+ :sassControl {:fg c.purple}
+ :sassExtend {:fg c.purple}
+ :sassFor {:fg c.white}
+ :sassFunction {:fg c.cyan}
+ :sassId {:fg c.blue}
+ :sassInclude {:fg c.purple}
+ :sassMedia {:fg c.purple}
+ :sassMediaOperators {:fg c.white}
+ :sassMixin {:fg c.purple}
+ :sassMixinName {:fg c.blue}
+ :sassMixing {:fg c.purple}
+ :sassVariable {:fg c.orange}
  ;; https://github.com/cakebaker/scss-syntax.vim
- {:hl :scssExtend :fg c.purple}
- {:hl :scssExtendedSelector :fg c.orange}
- {:hl :scssFunctionName :fg c.cyan}
- {:hl :scssImport :fg c.purple}
- {:hl :scssInclude :fg c.purple}
- {:hl :scssMixin :fg c.purple}
- {:hl :scssMixinName :fg c.blue}
- {:hl :scssSelectorName :fg c.yellow}
- {:hl :scssVariable :fg c.orange}
+ :scssExtend {:fg c.purple}
+ :scssExtendedSelector {:fg c.orange}
+ :scssFunctionName {:fg c.cyan}
+ :scssImport {:fg c.purple}
+ :scssInclude {:fg c.purple}
+ :scssMixin {:fg c.purple}
+ :scssMixinName {:fg c.blue}
+ :scssSelectorName {:fg c.yellow}
+ :scssVariable {:fg c.orange}
  ;; TypeScript
- {:hl :typescriptReserved :fg c.purple}
- {:hl :typescriptEndColons :fg c.white}
- {:hl :typescriptBraces :fg c.white}
+ :typescriptReserved {:fg c.purple}
+ :typescriptEndColons {:fg c.white}
+ :typescriptBraces {:fg c.white}
  ;; XML
- {:hl :xmlAttrib :fg c.yellow}
- {:hl :xmlEndTag :fg c.red}
- {:hl :xmlTag :fg c.red}
- {:hl :xmlTagName :fg c.red}
+ :xmlAttrib {:fg c.yellow}
+ :xmlEndTag {:fg c.red}
+ :xmlTag {:fg c.red}
+ :xmlTagName {:fg c.red}
  ;; PHP
- {:hl :phpInclude :fg c.purple}
- {:hl :phpClass :fg c.yellow}
- {:hl :phpClasses :fg c.yellow}
- {:hl :phpFunction :fg c.blue}
- {:hl :phpType :fg c.purple}
- {:hl :phpKeyword :fg c.purple}
- {:hl :phpVarSelector :fg c.white}
- {:hl :phpIdentifier :fg c.white}
- {:hl :phpMethod :fg c.blue}
- {:hl :phpBoolean :fg c.blue}
- {:hl :phpParent :fg c.white}
- {:hl :phpOperator :fg c.purple}
- {:hl :phpRegion :fg c.purple}
- {:hl :phpUseNamespaceSeparator :fg c.white}
- {:hl :phpClassNamespaceSeparator :fg c.white}
- {:hl :phpDocTags :fg c.purple :italic true}
- {:hl :phpDocParam :fg c.purple :italic true}
+ :phpInclude {:fg c.purple}
+ :phpClass {:fg c.yellow}
+ :phpClasses {:fg c.yellow}
+ :phpFunction {:fg c.blue}
+ :phpType {:fg c.purple}
+ :phpKeyword {:fg c.purple}
+ :phpVarSelector {:fg c.white}
+ :phpIdentifier {:fg c.white}
+ :phpMethod {:fg c.blue}
+ :phpBoolean {:fg c.blue}
+ :phpParent {:fg c.white}
+ :phpOperator {:fg c.purple}
+ :phpRegion {:fg c.purple}
+ :phpUseNamespaceSeparator {:fg c.white}
+ :phpClassNamespaceSeparator {:fg c.white}
+ :phpDocTags {:fg c.purple :italic true}
+ :phpDocParam {:fg c.purple :italic true}
  ;; Dart
- {:hl :dartLibrary :fg c.purple}
- {:hl :dartTypedef :fg c.purple}
- {:hl :dartClassDecl :fg c.purple}
- {:hl :dartCoreType :fg c.purple}
- {:hl :dartStorageClass :fg c.purple}
- {:hl :dartOperator :fg c.purple}
- {:hl :dartMetadata :fg c.purple}
- {:hl :dartKeyword :fg c.purple}
+ :dartLibrary {:fg c.purple}
+ :dartTypedef {:fg c.purple}
+ :dartClassDecl {:fg c.purple}
+ :dartCoreType {:fg c.purple}
+ :dartStorageClass {:fg c.purple}
+ :dartOperator {:fg c.purple}
+ :dartMetadata {:fg c.purple}
+ :dartKeyword {:fg c.purple}
  ;; Gitconfig
- {:hl :gitconfigSection :fg c.yellow}
- {:hl :gitconfigVariable :fg c.cyan}
- {:hl :gitconfigAssignment :fg c.green}
- {:hl :gitConfigString :fg c.green}
- {:hl :gitConfigEscape :fg c.comment}
+ :gitconfigSection {:fg c.yellow}
+ :gitconfigVariable {:fg c.cyan}
+ :gitconfigAssignment {:fg c.green}
+ :gitConfigString {:fg c.green}
+ :gitConfigEscape {:fg c.comment}
  ;; Plugin highlighting
  ;; airblade/vim-gitgutter
- {:hl :GitGutterAdd :link :SignifySignAdd}
- {:hl :GitGutterChange :link :SignifySignChange}
- {:hl :GitGutterDelete :link :SignifySignDelete}
+ :GitGutterAdd {:link :SignifySignAdd}
+ :GitGutterChange {:link :SignifySignChange}
+ :GitGutterDelete {:link :SignifySignDelete}
  ;; mhinz/vim-signify
- {:hl :SignifySignAdd :fg c.green}
- {:hl :SignifySignChange :fg c.yellow}
- {:hl :SignifySignDelete :fg c.red}
+ :SignifySignAdd {:fg c.green}
+ :SignifySignChange {:fg c.yellow}
+ :SignifySignDelete {:fg c.red}
  ;; neomake/neomake
- {:hl :NeomakeWarningSign :fg c.yellow}
- {:hl :NeomakeErrorSign :fg c.red}
- {:hl :NeomakeInfoSign :fg c.blue}
+ :NeomakeWarningSign {:fg c.yellow}
+ :NeomakeErrorSign {:fg c.red}
+ :NeomakeInfoSign {:fg c.blue}
  ;; tpope/vim-fugitive
- {:hl :diffAdded :fg c.green}
- {:hl :diffRemoved :fg c.red}
+ :diffAdded {:fg c.green}
+ :diffRemoved {:fg c.red}
  ;; liuchengxu/vista.vim
- {:hl :VistaBracket :fg c.purple}
- {:hl :VistaChildrenNr :fg c.orange}
- {:hl :VistaScope :fg c.blue_purple}
- {:hl :VistaTag :fg c.purple}
- {:hl :VistaPrefix :fg c.blue_purple}
- {:hl :VistaParenthesis :fg c.purple}
- {:hl :VistaColon :fg c.cyan}
- {:hl :VistaIcon :fg c.cyan}
- {:hl :VistaLineNr :fg c.comment}
- {:hl :VistaArgs :fg c.comment}
- {:hl :VistaKind :fg c.comment}
- {:hl :VistaScopeKind :fg c.yellow}
+ :VistaBracket {:fg c.purple}
+ :VistaChildrenNr {:fg c.orange}
+ :VistaScope {:fg c.blue_purple}
+ :VistaTag {:fg c.purple}
+ :VistaPrefix {:fg c.blue_purple}
+ :VistaParenthesis {:fg c.purple}
+ :VistaColon {:fg c.cyan}
+ :VistaIcon {:fg c.cyan}
+ :VistaLineNr {:fg c.comment}
+ :VistaArgs {:fg c.comment}
+ :VistaKind {:fg c.comment}
+ :VistaScopeKind {:fg c.yellow}
  ;; termdebug
- {:hl :debugBreakpoint :fg c.blue_purple}
- {:hl :debugPC :bg c.blue_purple :fg c.black}
+ :debugBreakpoint {:fg c.blue_purple}
+ :debugPC {:bg c.blue_purple :fg c.black}
  ;; davidhalter/jedi-vim
- {:hl :jediFunction :bg c.special :fg c.white}
- {:hl :jediFat :bg c.special :fg c.blue :bold true :underline true}
+ :jediFunction {:bg c.special :fg c.white}
+ :jediFat {:bg c.special :fg c.blue :bold true :underline true}
  ;; https://gitlab.com/HiPhish/rainbow-delimiters.nvim
- {:hl :RainbowDelimiterRed :fg c.red}
- {:hl :RainbowDelimiterYellow :fg c.yellow}
- {:hl :RainbowDelimiterBlue :fg c.blue}
- {:hl :RainbowDelimiterOrange :fg c.orange}
- {:hl :RainbowDelimiterGreen :fg c.green}
- {:hl :RainbowDelimiterViolet :fg c.purple}
- {:hl :RainbowDelimiterCyan :fg c.cyan}
+ :RainbowDelimiterRed {:fg c.red}
+ :RainbowDelimiterYellow {:fg c.yellow}
+ :RainbowDelimiterBlue {:fg c.blue}
+ :RainbowDelimiterOrange {:fg c.orange}
+ :RainbowDelimiterGreen {:fg c.green}
+ :RainbowDelimiterViolet {:fg c.purple}
+ :RainbowDelimiterCyan {:fg c.cyan}
  ;; lewis6991/gitsigns.nvim
- {:hl :GitSignsAdd :fg c.green}
- {:hl :GitSignsChange :fg c.yellow}
- {:hl :GitSignsDelete :fg c.red}
- {:hl :GitSignsCurrentLineBlame :fg c.special}
+ :GitSignsAdd {:fg c.green}
+ :GitSignsChange {:fg c.yellow}
+ :GitSignsDelete {:fg c.red}
+ :GitSignsCurrentLineBlame {:fg c.special}
  ;; lukas-reineke/indent-blankline.nvim
- {:hl :IblIndent :fg c.line_number}
+ :IblIndent {:fg c.line_number}
  ;; m-demare/hlargs.nvim
- {:hl :Hlargs :fg c.orange}
+ :Hlargs {:fg c.orange}
  ;; Tree-sitter
- {:hl "@annotation" :fg c.yellow}
- {:hl "@attribute" :fg c.light_red}
- {:hl "@boolean" :fg c.red :italic true}
- {:hl "@character" :fg c.green}
- {:hl "@character.special" :fg c.blue_purple}
- {:hl "@comment" :fg c.comment}
- {:hl "@conditional" :fg c.purple}
- {:hl "@constant" :fg c.cyan}
- {:hl "@constant.builtin" :fg c.yellow}
- {:hl "@constant.macro" :fg c.orange}
- {:hl "@constructor" :fg c.white}
- {:hl "@define" :fg c.purple}
- {:hl "@exception" :fg c.purple}
- {:hl "@field" :fg c.cyan}
- {:hl "@float" :fg c.orange}
- {:hl "@function" :fg c.blue}
- {:hl "@function.builtin" :fg c.cyan}
- {:hl "@function.call" :fg c.blue}
- {:hl "@function.macro" :fg c.purple :italic true}
- {:hl "@include" :fg c.blue}
- {:hl "@keyword" :fg c.red}
- {:hl "@keyword.function" :fg c.blue_purple}
- {:hl "@keyword.operator" :fg c.purple}
- {:hl "@keyword.return" :fg c.red}
- {:hl "@label" :fg c.purple}
- {:hl "@method" :fg c.blue}
- {:hl "@method.call" :fg c.blue}
- {:hl "@namespace" :fg c.blue_purple}
- {:hl "@number" :fg c.orange}
- {:hl "@operator" :fg c.purple}
- {:hl "@parameter" :fg c.white}
- {:hl "@parameter.reference" :fg c.menu}
- {:hl "@property" :fg c.cyan}
- {:hl "@punctuation.bracket" :fg c.white}
- {:hl "@punctuation.delimiter" :fg c.white}
- {:hl "@punctuation.special" :fg c.white}
- {:hl "@repeat" :fg c.purple}
- {:hl "@storageclass" :fg c.yellow}
- {:hl "@string" :fg c.green}
- {:hl "@string.escape" :fg c.special}
- {:hl "@string.regex" :fg c.white}
- {:hl "@string.special" :fg c.menu}
- {:hl "@symbol" :fg c.red}
- {:hl "@tag" :fg c.light_red}
- {:hl "@tag.attribute" :fg c.green}
- {:hl "@tag.delimiter" :fg c.white}
- {:hl "@text.danger" :fg c.orange}
- {:hl "@text.emphasis" :italic true}
- {:hl "@text.environment" :fg c.light_red}
- {:hl "@text.environment.name" :fg c.cyan}
- {:hl "@text.literal" :fg c.yellow}
- {:hl "@text.reference" :fg c.cyan}
- {:hl "@text.strike" :strikethrough true}
- {:hl "@text.strong" :bold true}
- {:hl "@text.title" :fg c.yellow :bold true}
- {:hl "@text.underline" :underline true}
- {:hl "@text.warning" :fg c.yellow}
- {:hl "@text.todo" :fg c.purple}
- {:hl "@type" :fg c.yellow}
- {:hl "@type.builtin" :fg c.orange}
- {:hl "@type.qualifier" :fg c.yellow}
- {:hl "@variable" :fg c.white}
- {:hl "@variable.builtin" :fg c.orange}
+ "@annotation" {:fg c.yellow}
+ "@attribute" {:fg c.light_red}
+ "@boolean" {:fg c.red :italic true}
+ "@character" {:fg c.green}
+ "@character.special" {:fg c.blue_purple}
+ "@comment" {:fg c.comment}
+ "@conditional" {:fg c.purple}
+ "@constant" {:fg c.cyan}
+ "@constant.builtin" {:fg c.yellow}
+ "@constant.macro" {:fg c.orange}
+ "@constructor" {:fg c.white}
+ "@define" {:fg c.purple}
+ "@exception" {:fg c.purple}
+ "@field" {:fg c.cyan}
+ "@float" {:fg c.orange}
+ "@function" {:fg c.blue}
+ "@function.builtin" {:fg c.cyan}
+ "@function.call" {:fg c.blue}
+ "@function.macro" {:fg c.purple :italic true}
+ "@include" {:fg c.blue}
+ "@keyword" {:fg c.red}
+ "@keyword.function" {:fg c.blue_purple}
+ "@keyword.operator" {:fg c.purple}
+ "@keyword.return" {:fg c.red}
+ "@label" {:fg c.purple}
+ "@method" {:fg c.blue}
+ "@method.call" {:fg c.blue}
+ "@namespace" {:fg c.blue_purple}
+ "@number" {:fg c.orange}
+ "@operator" {:fg c.purple}
+ "@parameter" {:fg c.white}
+ "@parameter.reference" {:fg c.menu}
+ "@property" {:fg c.cyan}
+ "@punctuation.bracket" {:fg c.white}
+ "@punctuation.delimiter" {:fg c.white}
+ "@punctuation.special" {:fg c.white}
+ "@repeat" {:fg c.purple}
+ "@storageclass" {:fg c.yellow}
+ "@string" {:fg c.green}
+ "@string.escape" {:fg c.special}
+ "@string.regex" {:fg c.white}
+ "@string.special" {:fg c.menu}
+ "@symbol" {:fg c.red}
+ "@tag" {:fg c.light_red}
+ "@tag.attribute" {:fg c.green}
+ "@tag.delimiter" {:fg c.white}
+ "@text.danger" {:fg c.orange}
+ "@text.emphasis" {:italic true}
+ "@text.environment" {:fg c.light_red}
+ "@text.environment.name" {:fg c.cyan}
+ "@text.literal" {:fg c.yellow}
+ "@text.reference" {:fg c.cyan}
+ "@text.strike" {:strikethrough true}
+ "@text.strong" {:bold true}
+ "@text.title" {:fg c.yellow :bold true}
+ "@text.underline" {:underline true}
+ "@text.warning" {:fg c.yellow}
+ "@text.todo" {:fg c.purple}
+ "@type" {:fg c.yellow}
+ "@type.builtin" {:fg c.orange}
+ "@type.qualifier" {:fg c.yellow}
+ "@variable" {:fg c.white}
+ "@variable.builtin" {:fg c.orange}
  ;; Markdown
- {:hl "@punctuation.special.markdown" :fg c.purple}
+ "@punctuation.special.markdown" {:fg c.purple}
  ;; LSP Semantic Highlight
- {:hl "@lsp.type.variable" :fg c.white}
- {:hl "@lsp.type.typeParameter"}
- {:hl "@lsp.type.enum" :fg c.yellow}
- {:hl "@lsp.type.enumMember" :fg c.cyan}
- {:hl "@lsp.type.parameter" :fg c.orange}
- {:hl "@lsp.type.namespace" :fg c.blue_purple}
- {:hl "@lsp.type.interface" :fg c.yellow}
- {:hl "@lsp.type.decorator" :fg c.yellow}
- {:hl "@lsp.type.property" :fg c.dark_green}
- {:hl "@lsp.type.function" :fg c.blue}
- {:hl "@lsp.type.comment" :fg c.comment}
- {:hl "@lsp.type.class" :fg c.yellow}
- {:hl "@lsp.type.struct" :fg c.yellow}
- {:hl "@lsp.type.method" :fg c.blue}
- {:hl "@lsp.type.macro" :fg c.purple}
- {:hl "@lsp.type.type" :fg c.yellow}
+ "@lsp.type.variable" {:fg c.white}
+ "@lsp.type.typeParameter" {}
+ "@lsp.type.enum" {:fg c.yellow}
+ "@lsp.type.enumMember" {:fg c.cyan}
+ "@lsp.type.parameter" {:fg c.orange}
+ "@lsp.type.namespace" {:fg c.blue_purple}
+ "@lsp.type.interface" {:fg c.yellow}
+ "@lsp.type.decorator" {:fg c.yellow}
+ "@lsp.type.property" {:fg c.dark_green}
+ "@lsp.type.function" {:fg c.blue}
+ "@lsp.type.comment" {:fg c.comment}
+ "@lsp.type.class" {:fg c.yellow}
+ "@lsp.type.struct" {:fg c.yellow}
+ "@lsp.type.method" {:fg c.blue}
+ "@lsp.type.macro" {:fg c.purple}
+ "@lsp.type.type" {:fg c.yellow}
  ;; NOTE: unresolvedReference applies to Rust, and, hopefuly, works for other LSP servers.
- {:hl "@lsp.type.unresolvedReference" :link :DiagnosticUnderlineError}
- {:hl "@lsp.mod.defaultLibrary.lua" :fg c.blue_purple}
+ "@lsp.type.unresolvedReference" {:link :DiagnosticUnderlineError}
+ "@lsp.mod.defaultLibrary.lua" {:fg c.blue_purple}
  ;; Git highlighting
- {:hl :gitcommitComment :fg c.comment}
- {:hl :gitcommitUnmerged :fg c.green}
- {:hl :gitcommitOnBranch}
- {:hl :gitcommitBranch :fg c.purple}
- {:hl :gitcommitDiscardedType :fg c.red}
- {:hl :gitcommitSelectedType :fg c.green}
- {:hl :gitcommitHeader}
- {:hl :gitcommitUntrackedFile :fg c.cyan}
- {:hl :gitcommitDiscardedFile :fg c.red}
- {:hl :gitcommitSelectedFile :fg c.green}
- {:hl :gitcommitUnmergedFile :fg c.yellow}
- {:hl :gitcommitFile}
- {:hl :gitcommitSummary :fg c.white}
- {:hl :gitcommitOverflow :fg c.red}
- {:hl :gitcommitNoBranch :link :gitcommitBranch}
- {:hl :gitcommitUntracked :link :gitcommitComment}
- {:hl :gitcommitDiscarded :link :gitcommitComment}
- {:hl :gitcommitSelected :link :gitcommitComment}
- {:hl :gitcommitDiscardedArrow :link :gitcommitDiscardedFile}
- {:hl :gitcommitSelectedArrow :link :gitcommitSelectedFile}
- {:hl :gitcommitUnmergedArrow :link :gitcommitUnmergedFile}
+ :gitcommitComment {:fg c.comment}
+ :gitcommitUnmerged {:fg c.green}
+ :gitcommitOnBranch {}
+ :gitcommitBranch {:fg c.purple}
+ :gitcommitDiscardedType {:fg c.red}
+ :gitcommitSelectedType {:fg c.green}
+ :gitcommitHeader {}
+ :gitcommitUntrackedFile {:fg c.cyan}
+ :gitcommitDiscardedFile {:fg c.red}
+ :gitcommitSelectedFile {:fg c.green}
+ :gitcommitUnmergedFile {:fg c.yellow}
+ :gitcommitFile {}
+ :gitcommitSummary {:fg c.white}
+ :gitcommitOverflow {:fg c.red}
+ :gitcommitNoBranch {:link :gitcommitBranch}
+ :gitcommitUntracked {:link :gitcommitComment}
+ :gitcommitDiscarded {:link :gitcommitComment}
+ :gitcommitSelected {:link :gitcommitComment}
+ :gitcommitDiscardedArrow {:link :gitcommitDiscardedFile}
+ :gitcommitSelectedArrow {:link :gitcommitSelectedFile}
+ :gitcommitUnmergedArrow {:link :gitcommitUnmergedFile}
  ;; LSP
- {:hl :DiagnosticError :fg c.red}
- {:hl :DiagnosticWarn :fg c.yellow}
- {:hl :DiagnosticInfo :fg c.white}
- {:hl :DiagnosticHint :fg c.special}
- {:hl :DiagnosticVirtualTextError :fg c.red}
- {:hl :DiagnosticVirtualTextWarn :fg c.yellow}
- {:hl :DiagnosticVirtualTextInfo :fg c.white}
- {:hl :DiagnosticVirtualTextHint :fg c.special}
- {:hl :DiagnosticUnderlineError :fg c.red :underline true}
- {:hl :DiagnosticUnderlineWarn :fg c.yellow :underline true}
- {:hl :DiagnosticUnderlineInfo :fg c.white :underline true}
- {:hl :DiagnosticUnderlineHint :fg c.special :underline true}
- ]
+ :DiagnosticError {:fg c.red}
+ :DiagnosticWarn {:fg c.yellow}
+ :DiagnosticInfo {:fg c.white}
+ :DiagnosticHint {:fg c.special}
+ :DiagnosticVirtualTextError {:fg c.red}
+ :DiagnosticVirtualTextWarn {:fg c.yellow}
+ :DiagnosticVirtualTextInfo {:fg c.white}
+ :DiagnosticVirtualTextHint {:fg c.special}
+ :DiagnosticUnderlineError {:fg c.red :underline true}
+ :DiagnosticUnderlineWarn {:fg c.yellow :underline true}
+ :DiagnosticUnderlineInfo {:fg c.white :underline true}
+ :DiagnosticUnderlineHint {:fg c.special :underline true}
+ }

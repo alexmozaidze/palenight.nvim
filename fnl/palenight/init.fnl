@@ -29,10 +29,8 @@
       (vim.cmd.hi :clear)))
   (set vim.g.colors_name :palenight)
   (let [groups (require :palenight/groups)]
-    (each [_ group (ipairs groups)]
-      (local hl group.hl)
-      (set group.hl nil)
-      (set group.italic (and M.italic group.italic))
-      (vim.api.nvim_set_hl 0 hl group))))
+    (each [group hl (pairs groups)]
+      (set hl.italic (and M.italic hl.italic))
+      (vim.api.nvim_set_hl 0 group hl))))
 
 M
