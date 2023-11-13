@@ -5,9 +5,9 @@
  {:hl :Constant :fg c.cyan}
  {:hl :String :fg c.green}
  {:hl :Character :fg c.green}
- {:hl :Number :fg c.dark_yellow}
+ {:hl :Number :fg c.orange}
  {:hl :Boolean :fg c.red}
- {:hl :Float :fg c.dark_yellow}
+ {:hl :Float :fg c.orange}
  {:hl :Identifier :fg c.red}
  {:hl :Function :fg c.blue}
  {:hl :Statement :fg c.purple}
@@ -69,9 +69,9 @@
  {:hl :Search :fg c.black :bg c.yellow}
  {:hl :SpecialKey :fg c.special_grey}
  {:hl :SpellBad :fg c.red :underline true}
- {:hl :SpellCap :fg c.dark_yellow}
- {:hl :SpellLocal :fg c.dark_yellow}
- {:hl :SpellRare :fg c.dark_yellow}
+ {:hl :SpellCap :fg c.orange}
+ {:hl :SpellLocal :fg c.orange}
+ {:hl :SpellRare :fg c.orange}
  {:hl :StatusLine :fg c.white :bg c.cursor_grey}
  {:hl :StatusLineNC :fg c.comment_grey}
  {:hl :TabLine :fg c.comment_grey}
@@ -94,19 +94,19 @@
  {:hl :cssAttrComma :fg c.purple}
  {:hl :cssAttributeSelector :fg c.green}
  {:hl :cssBraces :fg c.white}
- {:hl :cssClassName :fg c.dark_yellow}
- {:hl :cssClassNameDot :fg c.dark_yellow}
+ {:hl :cssClassName :fg c.orange}
+ {:hl :cssClassNameDot :fg c.orange}
  {:hl :cssDefinition :fg c.purple}
- {:hl :cssFontAttr :fg c.dark_yellow}
+ {:hl :cssFontAttr :fg c.orange}
  {:hl :cssFontDescriptor :fg c.purple}
  {:hl :cssFunctionName :fg c.blue}
  {:hl :cssIdentifier :fg c.blue}
  {:hl :cssImportant :fg c.purple}
  {:hl :cssInclude :fg c.white}
  {:hl :cssIncludeKeyword :fg c.purple}
- {:hl :cssMediaType :fg c.dark_yellow}
+ {:hl :cssMediaType :fg c.orange}
  {:hl :cssProp :fg c.white}
- {:hl :cssPseudoClassId :fg c.dark_yellow}
+ {:hl :cssPseudoClassId :fg c.orange}
  {:hl :cssSelectorOp :fg c.purple}
  {:hl :cssSelectorOp2 :fg c.purple}
  {:hl :cssTagName :fg c.red}
@@ -118,7 +118,7 @@
  {:hl :htmlEndTag :fg c.cyan}
  {:hl :htmlH1 :fg c.white}
  {:hl :htmlLink :fg c.purple}
- {:hl :htmlSpecialChar :fg c.dark_yellow}
+ {:hl :htmlSpecialChar :fg c.orange}
  {:hl :htmlSpecialTagName :fg c.red}
  {:hl :htmlTag :fg c.cyan}
  {:hl :htmlTagName :fg c.red}
@@ -128,8 +128,8 @@
  {:hl :javaScriptBraces :fg c.white}
  {:hl :javaScriptFunction :fg c.purple}
  {:hl :javaScriptIdentifier :fg c.purple}
- {:hl :javaScriptNull :fg c.dark_yellow}
- {:hl :javaScriptNumber :fg c.dark_yellow}
+ {:hl :javaScriptNull :fg c.orange}
+ {:hl :javaScriptNumber :fg c.orange}
  {:hl :javaScriptRequire :fg c.cyan}
  {:hl :javaScriptReserved :fg c.purple}
  ;; httpc.//github.com/pangloss/vim-javascript
@@ -159,13 +159,13 @@
  {:hl :jsModuleWords :fg c.purple}
  {:hl :jsModuleKeyword :fg c.blue}
  {:hl :jsModules :fg c.purple}
- {:hl :jsNull :fg c.dark_yellow}
+ {:hl :jsNull :fg c.orange}
  {:hl :jsStorageClass :fg c.purple}
  {:hl :jsSuper :fg c.red}
  {:hl :jsTemplateBraces :fg c.dark_red}
  {:hl :jsTemplateVar :fg c.green}
  {:hl :jsThis :fg c.red}
- {:hl :jsUndefined :fg c.dark_yellow}
+ {:hl :jsUndefined :fg c.orange}
  ;; {:hl :jsVariableDef :fg c.blue}
  ;; httpc.//github.com/othree/yajs.vim
  {:hl :javascriptArrowFunc :fg c.purple}
@@ -191,7 +191,7 @@
  {:hl :jsonCommentError :fg c.white}
  {:hl :jsonKeyword :fg c.blue}
  {:hl :jsonBoolean :fg c.red}
- {:hl :jsonNumber :fg c.dark_yellow}
+ {:hl :jsonNumber :fg c.orange}
  {:hl :jsonQuote :fg c.white}
  {:hl :jsonMissingCommaError :fg c.red :reverse true}
  {:hl :jsonNoQuotesError :fg c.red :reverse true}
@@ -270,7 +270,7 @@
  {:hl :rspecGroupMethods :fg c.white}
  {:hl :rspecBeforeAndAfter :fg c.white}
  ;; CSS
- {:hl :cssColor :fg c.dark_yellow}
+ {:hl :cssColor :fg c.orange}
  {:hl :cssCommonAttr :fg c.blue}
  {:hl :cssProp :fg c.cyan}
  {:hl :cssSelectorOp :fg c.white}
@@ -278,7 +278,7 @@
  ;; Sass
  ;; httpc.//github.com/tpope/vim-haml
  {:hl :sassAmpersand :fg c.red}
- {:hl :sassClass :fg c.dark_yellow}
+ {:hl :sassClass :fg c.orange}
  {:hl :sassControl :fg c.purple}
  {:hl :sassExtend :fg c.purple}
  {:hl :sassFor :fg c.white}
@@ -290,17 +290,17 @@
  {:hl :sassMixin :fg c.purple}
  {:hl :sassMixinName :fg c.blue}
  {:hl :sassMixing :fg c.purple}
- {:hl :sassVariable :fg c.dark_yellow}
+ {:hl :sassVariable :fg c.orange}
  ;; httpc.//github.com/cakebaker/scss-syntax.vim
  {:hl :scssExtend :fg c.purple}
- {:hl :scssExtendedSelector :fg c.dark_yellow}
+ {:hl :scssExtendedSelector :fg c.orange}
  {:hl :scssFunctionName :fg c.cyan}
  {:hl :scssImport :fg c.purple}
  {:hl :scssInclude :fg c.purple}
  {:hl :scssMixin :fg c.purple}
  {:hl :scssMixinName :fg c.blue}
  {:hl :scssSelectorName :fg c.yellow}
- {:hl :scssVariable :fg c.dark_yellow}
+ {:hl :scssVariable :fg c.orange}
  ;; TypeScript
  {:hl :typescriptReserved :fg c.purple}
  {:hl :typescriptEndColons :fg c.white}
@@ -361,7 +361,7 @@
  {:hl :diffRemoved :fg c.red}
  ;; liuchengxu/vista.vim
  {:hl :VistaBracket :fg c.purple}
- {:hl :VistaChildrenNr :fg c.dark_yellow}
+ {:hl :VistaChildrenNr :fg c.orange}
  {:hl :VistaScope :fg c.blue_purple}
  {:hl :VistaTag :fg c.purple}
  {:hl :VistaPrefix :fg c.blue_purple}
@@ -401,12 +401,12 @@
  {:hl "@conditional" :fg c.purple}
  {:hl "@constant" :fg c.cyan}
  {:hl "@constant.builtin" :fg c.yellow}
- {:hl "@constant.macro" :fg c.dark_yellow}
+ {:hl "@constant.macro" :fg c.orange}
  {:hl "@constructor" :fg c.white}
  {:hl "@define" :fg c.purple}
  {:hl "@exception" :fg c.purple}
  {:hl "@field" :fg c.cyan}
- {:hl "@float" :fg c.dark_yellow}
+ {:hl "@float" :fg c.orange}
  {:hl "@function" :fg c.blue}
  {:hl "@function.builtin" :fg c.cyan}
  {:hl "@function.call" :fg c.blue}
@@ -420,7 +420,7 @@
  {:hl "@method" :fg c.blue}
  {:hl "@method.call" :fg c.blue}
  {:hl "@namespace" :fg c.blue_purple}
- {:hl "@number" :fg c.dark_yellow}
+ {:hl "@number" :fg c.orange}
  {:hl "@operator" :fg c.purple}
  {:hl "@parameter" :fg c.white}
  {:hl "@parameter.reference" :fg c.menu_grey}
@@ -438,7 +438,7 @@
  {:hl "@tag" :fg c.light_red}
  {:hl "@tag.attribute" :fg c.green}
  {:hl "@tag.delimiter" :fg c.white}
- {:hl "@text.danger" :fg c.dark_yellow}
+ {:hl "@text.danger" :fg c.orange}
  {:hl "@text.emphasis" :italic true}
  {:hl "@text.environment" :fg c.light_red}
  {:hl "@text.environment.name" :fg c.cyan}
@@ -451,10 +451,10 @@
  {:hl "@text.warning" :fg c.yellow}
  {:hl "@text.todo" :fg c.purple}
  {:hl "@type" :fg c.yellow}
- {:hl "@type.builtin" :fg c.dark_yellow}
+ {:hl "@type.builtin" :fg c.orange}
  {:hl "@type.qualifier" :fg c.yellow}
  {:hl "@variable" :fg c.white}
- {:hl "@variable.builtin" :fg c.dark_yellow}
+ {:hl "@variable.builtin" :fg c.orange}
  ;; Git highlighting
  {:hl :gitcommitComment :fg c.comment_grey}
  {:hl :gitcommitUnmerged :fg c.green}

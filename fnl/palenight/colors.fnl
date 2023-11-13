@@ -4,7 +4,7 @@
  :dark_red       :#BE5046
  :green          :#C3E88D
  :yellow         :#ffcb6b
- :dark_yellow    :#F78C6C
+ :orange         :#F78C6C
  :blue           :#82b1ff
  :purple         :#c792ea
  :blue_purple    :#939ede
