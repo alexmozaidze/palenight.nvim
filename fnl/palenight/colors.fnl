@@ -3,6 +3,7 @@
  :light_red      :#ff869a
  :dark_red       :#BE5046
  :green          :#C3E88D
+ :dark_green     :#a2db4f
  :yellow         :#ffcb6b
  :orange         :#F78C6C
  :blue           :#82b1ff
