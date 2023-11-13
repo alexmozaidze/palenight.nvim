@@ -1,7 +1,7 @@
 (local c (require :palenight/colors))
 
-[;; Syntax hls
- {:hl :Comment :fg c.comment_grey :italic true}
+[;; Syntax Groups
+ {:hl :Comment :fg c.comment :italic true}
  {:hl :Constant :fg c.cyan}
  {:hl :String :fg c.green}
  {:hl :Character :fg c.green}
@@ -30,19 +30,19 @@
  {:hl :SpecialChar}
  {:hl :Tag}
  {:hl :Delimiter}
- {:hl :SpecialComment :fg c.comment_grey}
+ {:hl :SpecialComment :fg c.special}
  {:hl :Debug}
  {:hl :Underlined :underline true}
  {:hl :Ignore}
  {:hl :Error :fg c.red}
  {:hl :Todo :fg c.purple}
  ;; Highlight hls
- {:hl :ColorColumn :bg c.cursor_grey}
+ {:hl :ColorColumn :bg c.cursor}
  {:hl :Conceal}
  {:hl :Cursor :fg c.black :bg c.blue}
  {:hl :CursorIM}
- {:hl :CursorColumn :bg c.cursor_grey}
- {:hl :CursorLine :bg c.cursor_grey}
+ {:hl :CursorColumn :bg c.cursor}
+ {:hl :CursorLine :bg c.cursor}
  {:hl :Directory :fg c.blue}
  {:hl :DiffAdd :bg c.green :fg c.black}
  {:hl :DiffChange :bg c.yellow :fg c.black}
@@ -50,36 +50,36 @@
  {:hl :DiffText :bg c.black :fg c.yellow}
  {:hl :ErrorMsg :fg c.red}
  {:hl :VertSplit :fg c.vertsplit}
- {:hl :Folded :bg c.cursor_grey :fg c.comment_grey}
+ {:hl :Folded :bg c.cursor :fg c.comment}
  {:hl :FoldColumn}
  {:hl :SignColumn}
- {:hl :IncSearch :fg c.yellow :bg c.comment_grey}
- {:hl :LineNr :fg c.gutter_fg_grey}
+ {:hl :IncSearch :fg c.yellow :bg c.comment}
+ {:hl :LineNr :fg c.line_number}
  {:hl :CursorLineNr}
  {:hl :MatchParen :fg c.blue :underline true}
  {:hl :ModeMsg}
  {:hl :MoreMsg}
- {:hl :NonText :fg c.special_grey}
+ {:hl :NonText :fg c.comment}
  {:hl :Normal :fg c.white :bg c.black}
- {:hl :Pmenu :bg c.menu_grey}
+ {:hl :Pmenu :bg c.menu}
  {:hl :PmenuSel :fg c.black :bg c.blue}
- {:hl :PmenuSbar :bg c.special_grey}
+ {:hl :PmenuSbar :bg c.special}
  {:hl :PmenuThumb :bg c.white}
  {:hl :Question :fg c.purple}
  {:hl :Search :fg c.black :bg c.yellow}
- {:hl :SpecialKey :fg c.special_grey}
+ {:hl :SpecialKey :fg c.special}
  {:hl :SpellBad :fg c.red :underline true}
  {:hl :SpellCap :fg c.orange}
  {:hl :SpellLocal :fg c.orange}
  {:hl :SpellRare :fg c.orange}
- {:hl :StatusLine :fg c.white :bg c.cursor_grey}
- {:hl :StatusLineNC :fg c.comment_grey}
- {:hl :TabLine :fg c.comment_grey}
+ {:hl :StatusLine :fg c.white :bg c.cursor}
+ {:hl :StatusLineNC :fg c.comment}
+ {:hl :TabLine :fg c.comment}
  {:hl :TabLineFill}
  {:hl :TabLineSel :fg c.white}
  {:hl :Title :fg c.green}
- {:hl :Visual :fg c.visual_black :bg c.visual_grey}
- {:hl :VisualNOS :bg c.visual_grey}
+ {:hl :Visual :bg c.highlight}
+ {:hl :VisualNOS :bg c.highlight}
  {:hl :WarningMsg :fg c.yellow}
  {:hl :WildMenu :fg c.black :bg c.blue}
  ;; Language-specific hls
@@ -132,7 +132,7 @@
  {:hl :javaScriptNumber :fg c.orange}
  {:hl :javaScriptRequire :fg c.cyan}
  {:hl :javaScriptReserved :fg c.purple}
- ;; httpc.//github.com/pangloss/vim-javascript
+ ;; https://github.com/pangloss/vim-javascript
  {:hl :jsArrowFunction :fg c.purple}
  {:hl :jsClassKeyword :fg c.purple}
  {:hl :jsClassDefinition :fg c.yellow}
@@ -167,7 +167,7 @@
  {:hl :jsThis :fg c.red}
  {:hl :jsUndefined :fg c.orange}
  ;; {:hl :jsVariableDef :fg c.blue}
- ;; httpc.//github.com/othree/yajs.vim
+ ;; https://github.com/othree/yajs.vim
  {:hl :javascriptArrowFunc :fg c.purple}
  {:hl :javascriptClassExtends :fg c.purple}
  {:hl :javascriptClassKeyword :fg c.purple}
@@ -193,21 +193,21 @@
  {:hl :jsonBoolean :fg c.red}
  {:hl :jsonNumber :fg c.orange}
  {:hl :jsonQuote :fg c.white}
- {:hl :jsonMissingCommaError :fg c.red :reverse true}
- {:hl :jsonNoQuotesError :fg c.red :reverse true}
- {:hl :jsonNumError :fg c.red :reverse true}
+ {:hl :jsonMissingCommaError :fg c.red :underline true}
+ {:hl :jsonNoQuotesError :fg c.red :underline true}
+ {:hl :jsonNumError :fg c.red :underline true}
  {:hl :jsonString :fg c.green}
- {:hl :jsonStringSQError :fg c.red :reverse true}
- {:hl :jsonSemicolonError :fg c.red :reverse true}
+ {:hl :jsonStringSQError :fg c.red :underline true}
+ {:hl :jsonSemicolonError :fg c.red :underline true}
  ;; Markdown
  {:hl :markdownCode :fg c.green}
- {:hl :markdownLinkReference :fg c.comment_grey}
- {:hl :markdownJekyllFrontMatter :fg c.comment_grey}
+ {:hl :markdownLinkReference :fg c.comment}
+ {:hl :markdownJekyllFrontMatter :fg c.comment}
  {:hl :markdownCodeBlock :fg c.green}
  {:hl :markdownCodeDelimiter :fg c.green}
  {:hl :markdownHeadingDelimiter :fg c.red}
- {:hl :markdownRule :fg c.comment_grey}
- {:hl :markdownHeadingRule :fg c.comment_grey}
+ {:hl :markdownRule :fg c.comment}
+ {:hl :markdownHeadingRule :fg c.comment}
  {:hl :htmlH1 :fg c.blue}
  {:hl :htmlH2 :fg c.blue}
  {:hl :htmlH3 :fg c.blue}
@@ -216,7 +216,7 @@
  {:hl :htmlH6 :fg c.blue}
  {:hl :mkdDelimiter :fg c.cyan}
  {:hl :markdownId :fg c.purple}
- {:hl :markdownBlockquote :fg c.comment_grey}
+ {:hl :markdownBlockquote :fg c.comment}
  {:hl :markdownItalic :fg c.purple :italic true}
  {:hl :mkdBold :fg c.yellow :bold true}
  {:hl :mkdInlineURL :fg c.light_red}
@@ -252,15 +252,15 @@
  {:hl :rubyPseudoVariable :fg c.blue}
  {:hl :rubyRegexp :fg c.white}
  {:hl :rubyRegexpDelimiter :fg c.cyan}
- {:hl :rubySharpBang :fg c.comment_grey}
+ {:hl :rubySharpBang :fg c.comment}
  {:hl :rubyStringDelimiter :fg c.green}
  {:hl :rubySymbol :fg c.blue}
  ;; ERb
  {:hl :erubyDelimiter :fg c.red}
  ;; Rails
- {:hl :railsAssetPreProc :fg c.comment_grey}
- {:hl :railsAssetInclude :fg c.comment_grey}
- {:hl :railsAssetIncluded :fg c.comment_grey}
+ {:hl :railsAssetPreProc :fg c.comment}
+ {:hl :railsAssetInclude :fg c.comment}
+ {:hl :railsAssetIncluded :fg c.comment}
  {:hl :rubyRailsMethod :fg c.blue}
  {:hl :rubyRailsFilterMethod :fg c.cyan}
  {:hl :rubyRailsRenderMethod :fg c.cyan}
@@ -276,7 +276,7 @@
  {:hl :cssSelectorOp :fg c.white}
  {:hl :cssUnitDecorators :fg c.yellow}
  ;; Sass
- ;; httpc.//github.com/tpope/vim-haml
+ ;; https://github.com/tpope/vim-haml
  {:hl :sassAmpersand :fg c.red}
  {:hl :sassClass :fg c.orange}
  {:hl :sassControl :fg c.purple}
@@ -291,7 +291,7 @@
  {:hl :sassMixinName :fg c.blue}
  {:hl :sassMixing :fg c.purple}
  {:hl :sassVariable :fg c.orange}
- ;; httpc.//github.com/cakebaker/scss-syntax.vim
+ ;; https://github.com/cakebaker/scss-syntax.vim
  {:hl :scssExtend :fg c.purple}
  {:hl :scssExtendedSelector :fg c.orange}
  {:hl :scssFunctionName :fg c.cyan}
@@ -342,7 +342,7 @@
  {:hl :gitconfigVariable :fg c.cyan}
  {:hl :gitconfigAssignment :fg c.green}
  {:hl :gitConfigString :fg c.green}
- {:hl :gitConfigEscape :fg c.comment_grey}
+ {:hl :gitConfigEscape :fg c.comment}
  ;; Plugin highlighting
  ;; airblade/vim-gitgutter
  {:hl :GitGutterAdd :link :SignifySignAdd}
@@ -368,21 +368,21 @@
  {:hl :VistaParenthesis :fg c.purple}
  {:hl :VistaColon :fg c.cyan}
  {:hl :VistaIcon :fg c.cyan}
- {:hl :VistaLineNr :fg c.comment_grey}
- {:hl :VistaArgs :fg c.comment_grey}
- {:hl :VistaKind :fg c.comment_grey}
+ {:hl :VistaLineNr :fg c.comment}
+ {:hl :VistaArgs :fg c.comment}
+ {:hl :VistaKind :fg c.comment}
  {:hl :VistaScopeKind :fg c.yellow}
  ;; termdebug
  {:hl :debugBreakpoint :fg c.blue_purple}
  {:hl :debugPC :bg c.blue_purple :fg c.black}
  ;; davidhalter/jedi-vim
- {:hl :jediFunction :bg c.white_mask_3 :fg c.white}
- {:hl :jediFat :bg c.white_mask_3 :fg c.blue :bold true :underline true}
+ {:hl :jediFunction :bg c.special :fg c.white}
+ {:hl :jediFat :bg c.special :fg c.blue :bold true :underline true}
  ;; https://gitlab.com/HiPhish/rainbow-delimiters.nvim
  {:hl :RainbowDelimiterRed :fg c.red}
  {:hl :RainbowDelimiterYellow :fg c.yellow}
  {:hl :RainbowDelimiterBlue :fg c.blue}
- {:hl :RainbowDelimiterOrange :fg c.light_red}
+ {:hl :RainbowDelimiterOrange :fg c.orange}
  {:hl :RainbowDelimiterGreen :fg c.green}
  {:hl :RainbowDelimiterViolet :fg c.purple}
  {:hl :RainbowDelimiterCyan :fg c.cyan}
@@ -390,14 +390,16 @@
  {:hl :GitSignsAdd :fg c.green}
  {:hl :GitSignsChange :fg c.yellow}
  {:hl :GitSignsDelete :fg c.red}
- {:hl :GitSignsCurrentLineBlame :fg c.comment_grey}
+ {:hl :GitSignsCurrentLineBlame :fg c.special}
+ ;; lukas-reineke/indent-blankline.nvim
+ {:hl :IblIndent :fg c.line_number}
  ;; Tree-sitter
  {:hl "@annotation" :fg c.yellow}
  {:hl "@attribute" :fg c.light_red}
  {:hl "@boolean" :fg c.red :italic true}
  {:hl "@character" :fg c.green}
  {:hl "@character.special" :fg c.blue_purple}
- {:hl "@comment" :fg c.comment_grey}
+ {:hl "@comment" :fg c.comment}
  {:hl "@conditional" :fg c.purple}
  {:hl "@constant" :fg c.cyan}
  {:hl "@constant.builtin" :fg c.yellow}
@@ -423,7 +425,7 @@
  {:hl "@number" :fg c.orange}
  {:hl "@operator" :fg c.purple}
  {:hl "@parameter" :fg c.white}
- {:hl "@parameter.reference" :fg c.menu_grey}
+ {:hl "@parameter.reference" :fg c.menu}
  {:hl "@property" :fg c.cyan}
  {:hl "@punctuation.bracket" :fg c.white}
  {:hl "@punctuation.delimiter" :fg c.white}
@@ -431,9 +433,9 @@
  {:hl "@repeat" :fg c.purple}
  {:hl "@storageclass" :fg c.yellow}
  {:hl "@string" :fg c.green}
- {:hl "@string.escape" :fg c.comment_grey}
+ {:hl "@string.escape" :fg c.special}
  {:hl "@string.regex" :fg c.white}
- {:hl "@string.special" :fg c.menu_grey}
+ {:hl "@string.special" :fg c.menu}
  {:hl "@symbol" :fg c.red}
  {:hl "@tag" :fg c.light_red}
  {:hl "@tag.attribute" :fg c.green}
@@ -455,6 +457,8 @@
  {:hl "@type.qualifier" :fg c.yellow}
  {:hl "@variable" :fg c.white}
  {:hl "@variable.builtin" :fg c.orange}
+ ;; Markdown
+ {:hl "@punctuation.special.markdown" :fg c.purple}
  ;; LSP Semantic Highlight
  {:hl "@lsp.type.variable" :fg c.white}
  {:hl "@lsp.type.typeParameter"}
@@ -466,17 +470,17 @@
  {:hl "@lsp.type.decorator" :fg c.yellow}
  {:hl "@lsp.type.property" :fg c.dark_green}
  {:hl "@lsp.type.function" :fg c.blue}
- {:hl "@lsp.type.comment" :fg c.comment_grey}
+ {:hl "@lsp.type.comment" :fg c.comment}
  {:hl "@lsp.type.class" :fg c.yellow}
  {:hl "@lsp.type.struct" :fg c.yellow}
  {:hl "@lsp.type.method" :fg c.blue}
  {:hl "@lsp.type.macro" :fg c.purple}
  {:hl "@lsp.type.type" :fg c.yellow}
  ;; NOTE: unresolvedReference applies to Rust, and, hopefuly, works for other LSP servers.
- {:hl "@lsp.type.unresolvedReference" :fg c.red :underline true}
+ {:hl "@lsp.type.unresolvedReference" :link :DiagnosticUnderlineError}
  {:hl "@lsp.mod.defaultLibrary.lua" :fg c.blue_purple}
  ;; Git highlighting
- {:hl :gitcommitComment :fg c.comment_grey}
+ {:hl :gitcommitComment :fg c.comment}
  {:hl :gitcommitUnmerged :fg c.green}
  {:hl :gitcommitOnBranch}
  {:hl :gitcommitBranch :fg c.purple}
@@ -501,13 +505,13 @@
  {:hl :DiagnosticError :fg c.red}
  {:hl :DiagnosticWarn :fg c.yellow}
  {:hl :DiagnosticInfo :fg c.white}
- {:hl :DiagnosticHint :fg c.comment_grey}
+ {:hl :DiagnosticHint :fg c.special}
  {:hl :DiagnosticVirtualTextError :fg c.red}
  {:hl :DiagnosticVirtualTextWarn :fg c.yellow}
  {:hl :DiagnosticVirtualTextInfo :fg c.white}
- {:hl :DiagnosticVirtualTextHint :fg c.comment_grey}
+ {:hl :DiagnosticVirtualTextHint :fg c.special}
  {:hl :DiagnosticUnderlineError :fg c.red :underline true}
  {:hl :DiagnosticUnderlineWarn :fg c.yellow :underline true}
  {:hl :DiagnosticUnderlineInfo :fg c.white :underline true}
- {:hl :DiagnosticUnderlineHint :fg c.comment_grey :underline true}
+ {:hl :DiagnosticUnderlineHint :fg c.special :underline true}
  ]
