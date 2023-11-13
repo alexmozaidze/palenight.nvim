@@ -4,6 +4,12 @@
 (lambda warn [message]
   (vim.notify (.. "palenight.nvim: " message) vim.log.levels.WARN))
 
+(lambda supported-nvim-version? []
+  (let [min-version 8
+        {:minor version} (vim.version)]
+    ;; NOTE: This check fails if nvim >=1.0 is used
+    (<= min-version version)))
+
 (local M {})
 
 (set M.config {:italic true})
@@ -14,9 +20,8 @@
     (set M.config new-config)))
 
 (lambda M.load []
-  (let [unsupported-nvim-version? (<= (. (vim.version) :minor) 7)]
-    (when unsupported-nvim-version?
-      (warn messages.unsupported-nvim-version)))
+  (when (not (supported-nvim-version?))
+    (warn messages.unsupported-nvim-version))
   (when (= vim.opt.background :light)
     (warn messages.unsupported-light-theme))
   (let [colorscheme-loaded? vim.g.colors_name]
