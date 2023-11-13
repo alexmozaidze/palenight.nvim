@@ -58,12 +58,13 @@ Here are the default options:
 ## Plugin support
 
 Many plugins are supported, the most important ones being:
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [rainbow-delimiters.nvim](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [nvim-treesitter][tree-sitter]
+- [lualine.nvim][lualine]
+- [rainbow-delimiters.nvim][rainbow-delimiters]
+- [gitsigns.nvim][gitsigns]
+- [indent-blankline.nvim][ibl]
 
-For full list of supported plugins, see [groups.fnl](fnl/palenight/groups.fnl#L340).
+For full list of supported plugins, see [groups.fnl](fnl/palenight/groups.fnl#L346).
 
 If you have a plugin that isn't supported, feel free to file an issue or make a pull request!
 
@@ -90,6 +91,11 @@ autocmd("ColorScheme", {
 For list of available colors check out [colors.fnl][colors].  
 Also check out `:help nvim_set_hl()` and `:help nvim_create_autocmd()`.
 
+[ibl]: https://github.com/lukas-reineke/indent-blankline.nvim
+[gitsigns]: https://github.com/lewis6991/gitsigns.nvim
+[rainbow-delimiters]: https://gitlab.com/HiPhish/rainbow-delimiters.nvim
+[lualine]: https://github.com/nvim-lualine/lualine.nvim
+[tree-sitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [colors]: fnl/palenight/colors.fnl
 [original-work]: https://github.com/drewtempelmeyer/palenight.vim
 [material-pale-night]: https://github.com/equinusocio/material-theme
