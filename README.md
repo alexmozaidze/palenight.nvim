@@ -94,12 +94,23 @@ Also check out `:help nvim_set_hl()` and `:help nvim_create_autocmd()`.
 
 ---
 
-If you want to change the *internal color table* - you can, but I don't know why you'd want this. Here's an example
+If you want to change the *internal* color/group table - you can, but I don't know why you'd want this. Here's an example using Lazy:
 ```lua
--- IMPORTANT! This must be done before colorscheme is loaded.
-local colors = require "palenight/colors"
-colors.comment = "#ff00ff"
+{
+   "alexmozaidze/palenight.nvim",
+   init = function()
+      -- Changing internal colors
+      local colors = require "palenight/colors"
+      colors.comment = "#ff00ff"
+      -- Changing internal group table
+      local groups = require "palenight/groups"
+      groups["@function"].fg = "#ff0000"
+   end,
+}
 ```
+Keep in mind that the order in which you require these modules is important.
+
+It's not recommended you modify the internals, but you can, and no one can stop you.
 
 [fennel]: https://fennel-lang.org/
 [hlargs]: https://github.com/m-demare/hlargs.nvim
