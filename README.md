@@ -63,6 +63,7 @@ Many plugins are supported, the most important ones being:
 - [rainbow-delimiters.nvim][rainbow-delimiters]
 - [gitsigns.nvim][gitsigns]
 - [indent-blankline.nvim][ibl]
+- [hlargs.nvim][hlargs]
 
 For full list of supported plugins, see [groups.fnl](fnl/palenight/groups.fnl#L346).
 
@@ -101,6 +102,7 @@ colors.comment = "#ff00ff"
 ```
 
 [fennel]: https://fennel-lang.org/
+[hlargs]: https://github.com/m-demare/hlargs.nvim
 [ibl]: https://github.com/lukas-reineke/indent-blankline.nvim
 [gitsigns]: https://github.com/lewis6991/gitsigns.nvim
 [rainbow-delimiters]: https://gitlab.com/HiPhish/rainbow-delimiters.nvim

@@ -393,6 +393,8 @@
  {:hl :GitSignsCurrentLineBlame :fg c.special}
  ;; lukas-reineke/indent-blankline.nvim
  {:hl :IblIndent :fg c.line_number}
+ ;; m-demare/hlargs.nvim
+ {:hl :Hlargs :fg c.orange}
  ;; Tree-sitter
  {:hl "@annotation" :fg c.yellow}
  {:hl "@attribute" :fg c.light_red}
