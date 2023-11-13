@@ -467,7 +467,7 @@
  {:hl "@lsp.type.enum" :fg c.yellow}
  {:hl "@lsp.type.enumMember" :fg c.cyan}
  {:hl "@lsp.type.parameter" :fg c.orange}
- {:hl "@lsp.type.namespace" :fg c.white}
+ {:hl "@lsp.type.namespace" :fg c.blue_purple}
  {:hl "@lsp.type.interface" :fg c.yellow}
  {:hl "@lsp.type.decorator" :fg c.yellow}
  {:hl "@lsp.type.property" :fg c.dark_green}
