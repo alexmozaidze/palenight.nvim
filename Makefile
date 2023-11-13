@@ -11,15 +11,15 @@ default: clean build
 build: $(OUT_FILES)
 	echo "Generated: $(OUT_FILES)"
 
-clean:
-	rm -rf lua/*
-
 lua/%.lua: fnl/%.fnl
 	mkdir -p "$$(dirname $@)"
 	fennel $(FENNEL_OPTS) -c $< > $@
 
-build-commit: clean build
+clean:
+	rm -rf lua/*
+
+commit:
 	git add lua
 	git commit -m 'chore: generated lua'
 
-.PHONY: default clean build build-commit
+.PHONY: default clean build commit
