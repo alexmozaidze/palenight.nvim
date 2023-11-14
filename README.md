@@ -1,6 +1,6 @@
 <div align="center">
 
-# palenight.vim
+# palenight.nvim
 
 ![palenight.nvim](demo-screenshot.png)
 
