@@ -6,7 +6,7 @@
 
 </div>
 
-> **Note**
+> [!NOTE]\
 > This is a maintained hard fork of [drewtempelmeyer/palenight.vim][original-work].
 
 Dark palenight colorscheme written in [Fennel][fennel] with full support for Tree-sitter, LSP (including semantic highlighting), and [lots of plugins](#plugin-support).
@@ -45,7 +45,7 @@ vim.cmd.colorscheme "palenight"
 
 ## Setup options
 
-> **Note**
+> [!NOTE]\
 > Setup is completely optional. You only need it to set options. Plugin loads by itself when you set colorscheme.
 
 Here are the default options:
