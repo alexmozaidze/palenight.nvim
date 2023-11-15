@@ -1,21 +1,21 @@
 {:red         :#ff5370
  :light_red   :#ff869a
- :dark_red    :#BE5046
- :green       :#C3E88D
+ :dark_red    :#be5046
+ :green       :#c3e88d
  :dark_green  :#a2db4f
  :yellow      :#ffcb6b
- :orange      :#F78C6C
+ :orange      :#f78c6c
  :blue        :#82b1ff
  :purple      :#c792ea
  :blue_purple :#939ede
- :cyan        :#89DDFF
+ :cyan        :#89ddff
  :white       :#bfc7d5
- :black       :#292D3E
+ :black       :#292d3e
  ;; Special colors
- :special     :#717CB4
+ :special     :#717cb4
  :comment     :#697098
- :line_number :#4B5263
- :highlight   :#3E4452
+ :line_number :#4b5263
+ :highlight   :#3e4452
  :menu        :#363a4c
- :cursor      :#2C323C
- :vertsplit   :#181A1F}
+ :cursor      :#2c323c
+ :vertsplit   :#181a1f}
