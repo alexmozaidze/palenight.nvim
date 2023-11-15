@@ -1,5 +1,6 @@
 (local messages {:unsupported-nvim-version "Only nvim >=0.8 is supported. Proceed at your own risk!"
-                 :unsupported-light-theme "Light theme is unsupported. Set `background` to `dark`."})
+                 :unsupported-light-theme "Light theme is unsupported. Set `background` to `dark`."
+                 :termguicolors-required "`termguicolors` option must be set for colors to be displayed."})
 
 (lambda warn [message]
   (vim.notify (.. "palenight.nvim: " message) vim.log.levels.WARN))
@@ -24,6 +25,8 @@
     (warn messages.unsupported-nvim-version))
   (when (= vim.opt.background :light)
     (warn messages.unsupported-light-theme))
+  (when (not vim.o.termguicolors)
+    (warn messages.termguicolors-required))
   (let [colorscheme-loaded? vim.g.colors_name]
     (when colorscheme-loaded?
       (vim.cmd.hi :clear)))
