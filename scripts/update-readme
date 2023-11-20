@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+regex='\(\[plugins-section\]: fnl/palenight/groups.fnl#L\)\([0-9]*\)'
+
+plugin_section_nr="$(awk '/Plugin highlighting/ { print NR }' fnl/palenight/groups.fnl)"
+old_plugin_section_nr="$(sed -n 's|'"$regex"'|\2|p' README.md)"
+
+if [ "$plugin_section_nr" = "$old_plugin_section_nr" ]; then
+	echo 'Plugin section line number is already correct'
+else
+	sed -i 's|'"$regex"'|\1'"$plugin_section_nr"'|' README.md
+	echo "Updated plugin section line number from '$old_plugin_section_nr' to '$plugin_section_nr'"
+fi

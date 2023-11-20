@@ -1,0 +1,1 @@
+return {red = 203, light_red = 210, dark_red = 131, green = 186, dark_green = 149, yellow = 221, orange = 209, blue = 111, purple = 176, blue_purple = 110, cyan = 117, white = 251, black = 236, special = 67, comment = 60, line_number = 239, highlight = 238, menu = 237, cursor = 236, vertsplit = 234}

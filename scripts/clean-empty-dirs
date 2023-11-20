@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+find "$1" -type d -empty -delete
+echo 'Empty directories removed'

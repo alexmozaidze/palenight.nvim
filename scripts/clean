@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+if [ $# -eq 0 ]; then
+	echo 'No leftover lua files'
+fi
+
+removed_files=""
+leftover_files=""
+
+for f in "$@"; do
+	rm "$f" &&
+		removed_files="$removed_files\n$f" ||
+		leftover_files="$leftover_files\n$f"
+done
+
+if [ -n "$removed_files" ]; then
+	echo "Removed leftover files:$removed_files"
+fi
+
+if [ -n "$leftover_files" ]; then
+	echo "Leftover files:$leftover_files"
+fi
+
+./scripts/clean-empty-dirs lua
