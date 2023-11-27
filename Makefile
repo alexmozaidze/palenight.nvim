@@ -8,7 +8,7 @@ SRC_FILES := $(shell find fnl -name '*.fnl')
 OUT_FILES := $(patsubst fnl/%.fnl,lua/%.lua,$(SRC_FILES))
 OLD_OUT_FILES := $(filter-out $(OUT_FILES),$(shell find lua -name '*.lua'))
 
-default: clean build update-readme
+default: clean build update-readme update-contributing
 
 build: $(OUT_FILES)
 
@@ -27,4 +27,7 @@ commit:
 update-readme:
 	./scripts/update-readme
 
-.PHONY: default clean build commit update-readme
+update-contributing:
+	./scripts/update-contributing
+
+.PHONY: default clean build commit update-readme update-contributing
