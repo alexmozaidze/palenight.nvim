@@ -91,17 +91,17 @@ In order to add/remove/rename colors, you have to:
 
 <div align="center">
 
-1. Modify schema
+## 1. Modify schema
 
 </div>
 
 Schema determines what colors must be present in every color table at compile-time. It's just an array of color names.
 
-Open up [macros/colors-table.fnl](macros/colors-table.fnl) and modify the [`schema`](macros/colors-table.fnl#L5).
+Open up [macros/colors-table.fnl][colors-schema] and modify the `schema`.
 
 <div align="center">
 
-2. Update colors
+## 2. Update colors
 
 </div>
 
@@ -109,7 +109,7 @@ Now that you've updated the schema, you have to update the color tables in [pale
 
 <div align="center">
 
-3. Build
+## 3. Build
 
 </div>
 
@@ -127,5 +127,6 @@ You can always ask about anything in [discussions][discussions], propose a chang
 
 Thanks for reading, and happy coding!
 
+[colors-schema]: macros/colors-table.fnl#L6
 [fennel-style-guide]: https://fennel-lang.org/style
 [discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
