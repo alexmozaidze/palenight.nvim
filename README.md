@@ -11,9 +11,9 @@
 
 Dark palenight colorscheme written in [Fennel][fennel] with full support for:
 - Tree-sitter
-- LSP, including semantic highlighting
+- LSP *(including semantic highlighting)*
 - True-color, 256 and 16 color palette terminals
-- [Lots of plugins](#plugin-support)!
+- And [lots of plugins!](#plugin-support)
 
 ## Requirements
 
@@ -58,12 +58,13 @@ Here are the default options:
    -- thus, they're disabled by default.
    italic = false,
 
-   -- Fallback color palette for non-truecolor terminals. (such as tty or some ancient terminal)
+   -- Fallback color palette for non-truecolor terminals,
+   -- such as tty or some really old terminal.
    --
    -- Available options:
    -- "auto" => 16 color palette if in linux tty, 256 otherwise.
-   -- 256    => 256 color palette
-   -- 16     => 16 color palette
+   -- 256    => 256 color palette.
+   -- 16     => 16 color palette.
    cterm_palette = "auto",
 }
 ```
@@ -115,7 +116,7 @@ If you want to change the *internal* color/group table - you can, but I don't kn
    "alexmozaidze/palenight.nvim",
    init = function()
       -- Changing internal colors
-      local colors = require "palenight/colors/truecolor.fnl"
+      local colors = require "palenight/colors/truecolor"
       colors.comment = "#ff00ff"
       -- Changing internal group table
       local groups = require "palenight/groups"
@@ -127,6 +128,11 @@ Keep in mind that the order in which you require these modules is important.
 
 It's not recommended you modify the internals, but you can, and no one can stop you.
 
+## Questions? Need help?
+
+Hop over on [discussions][discussions] and ask away!
+
+[discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
 [marks]: https://github.com/chentoast/marks.nvim
 [plugins-section]: fnl/palenight/groups.fnl#L332
 [fennel]: https://fennel-lang.org/
