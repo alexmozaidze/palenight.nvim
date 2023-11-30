@@ -106,8 +106,7 @@
                       "@lsp.type.namespace" {:link "@namespace"}
                       "@lsp.type.interface" {:link "@type"}
                       "@lsp.type.decorator" {:link "@type"}
-                      ;: Make properties stand out. Helps distinguishing them in certain use cases.
-                      "@lsp.type.property" {:fg :dark_green}
+                      "@lsp.type.property" {:link "@property"}
                       "@lsp.type.function" {:link "@function"}
                       "@lsp.type.comment" {:link "@comment"}
                       "@lsp.type.class" {:link "@type"}

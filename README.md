@@ -128,7 +128,7 @@ Keep in mind that the order in which you require these modules is important.
 It's not recommended you modify the internals, but you can, and no one can stop you.
 
 [marks]: https://github.com/chentoast/marks.nvim
-[plugins-section]: fnl/palenight/groups.fnl#L333
+[plugins-section]: fnl/palenight/groups.fnl#L332
 [fennel]: https://fennel-lang.org/
 [modicator]: https://github.com/mawkler/modicator.nvim
 [hlslens]: https://github.com/kevinhwang91/nvim-hlslens
