@@ -124,7 +124,9 @@ If you want to change the *internal* color/group table - you can, but I don't kn
    end,
 }
 ```
-Keep in mind that the order in which you require these modules is important.
+
+> [!IMPORTANT]\
+> The order in which you require these modules is important. Require colors before requiring groups.
 
 It's not recommended you modify the internals, but you can, and no one can stop you.
 
