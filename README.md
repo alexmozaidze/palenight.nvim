@@ -17,7 +17,7 @@ Dark palenight colorscheme written in [Fennel][fennel] with full support for:
 
 ## Requirements
 
-NeoVim >=0.8 and the following option set:
+Neovim >=0.8 and the following option set:
 ```lua
 vim.opt.background = "dark"
 ```
@@ -87,7 +87,7 @@ If you have a plugin that isn't supported, feel free to file an issue or make a 
 
 ## Overriding colors
 
-NeoVim already has an easy way of overriding colors of a colorscheme. Here's an example!
+Neovim already has an easy way of overriding colors of a colorscheme. Here's an example!
 
 ```lua
 local colors = require "palenight/colors/truecolor"
