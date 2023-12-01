@@ -7,12 +7,13 @@ FENNEL_OPTS := --add-macro-path 'macros/?.fnl' --indent '	'
 SRC_FILES := $(shell find fnl -name '*.fnl')
 OUT_FILES := $(patsubst fnl/%.fnl,lua/%.lua,$(SRC_FILES))
 OLD_OUT_FILES := $(filter-out $(OUT_FILES),$(shell find lua -name '*.lua'))
+MACRO_FILES := $(shell find macros -name '*.fnl')
 
 default: clean build update-readme update-contributing
 
 build: $(OUT_FILES)
 
-lua/%.lua: fnl/%.fnl
+lua/%.lua: fnl/%.fnl $(MACRO_FILES)
 	- mkdir -p "$$(dirname $@)"
 	$(FENNEL) $(FENNEL_OPTS) -c $< > $@
 	echo 'Generated $@'
