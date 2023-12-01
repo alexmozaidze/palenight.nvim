@@ -136,7 +136,7 @@ Hop over on [discussions][discussions] and ask away!
 
 [discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
 [marks]: https://github.com/chentoast/marks.nvim
-[plugins-section]: fnl/palenight/groups.fnl#L332
+[plugins-section]: fnl/palenight/groups.fnl#L343
 [fennel]: https://fennel-lang.org/
 [modicator]: https://github.com/mawkler/modicator.nvim
 [hlslens]: https://github.com/kevinhwang91/nvim-hlslens

@@ -80,6 +80,8 @@
                       "@parameter.bash" {}
                       ;; JSON parser likes to be all different, coloring properties as "@label".
                       "@label.json" {:link "@property"}
+                      ;; INI files should not be colored with text highlights
+                      "@text.ini" {:link "@string"}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                           LSP                            ║
                       ;; ╚══════════════════════════════════════════════════════════╝
@@ -270,6 +272,15 @@
                       ;; ╰──────╯
                       :tomlTable {:link "@type"}
                       :tomlKey {:link "@property"}
+                      ;; ╭─────╮
+                      ;; │ INI │
+                      ;; ╰─────╯
+                      :dosiniHeader {:link "@type"}
+                      :dosiniLabel {:link "@property"}
+                      ;; ╭──────────────╮
+                      ;; │ Editorconfig │
+                      ;; ╰──────────────╯
+                      :editorconfigProperty {:link "@property"}
                       ;; ╭──────────╮
                       ;; │ Markdown │
                       ;; ╰──────────╯
