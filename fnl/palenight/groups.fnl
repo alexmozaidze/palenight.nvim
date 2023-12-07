@@ -425,6 +425,34 @@
                       :MarkSignHL {:fg :red}
                       :MarkSignNumHL {}
                       :MarkVirtTextHL {:fg :special}
+                      ;; ╭──────────────────╮
+                      ;; │ hrsh7th/nvim-cmp │
+                      ;; ╰──────────────────╯
+                      :CmpItemAbbrMatch {:fg :blue}
+                      :CmpItemAbbrMatchFuzzy {:link "CmpItemAbbrMatch"}
+                      :CmpItemAbbrDeprecated {:link "DiagnosticDeprecated"}
+                      :CmpItemKindText {:link "@text"}
+                      :CmpItemKindKeyword {:link "@keyword"}
+                      :CmpItemKindVariable {:link "@lsp.type.variable"}
+                      :CmpItemKindProperty {:link "@lsp.type.property"}
+                      :CmpItemKindFunction {:link "@lsp.type.function"}
+                      :CmpItemKindClass {:link "@lsp.type.class"}
+                      :CmpItemKindStruct {:link "@lsp.type.struct"}
+                      :CmpItemKindMethod {:link "@lsp.type.method"}
+                      :CmpItemKindField {:link "@field"}
+                      :CmpItemKindInterface {:link "@lsp.type.interface"}
+                      :CmpItemKindConstructor {:link "@constructor"}
+                      :CmpItemKindEnum {:link "@lsp.type.enum"}
+                      :CmpItemKindEnumMember {:link "@lsp.type.enumMember"}
+                      :CmpItemKindConstant {:link "@constant"}
+                      :CmpItemKindTypeParameter {:link "@lsp.type.parameter"}
+                      :CmpItemKindOperator {:link "@operator"}
+                      :CmpItemKindFile {:fg :dark_green}
+                      :CmpItemKindFolder {:fg :green}
+                      :CmpItemKindColor {:fg :dark_red}
+                      :CmpItemKindModule {:link "@lsp.type.namespace"}
+                      :CmpItemKindSnippet {:fg :purple}
+                      :CmpItemKindReference {:fg :cyan}
                       ;; ╭────────────────────────╮
                       ;; │ mawkler/modicator.nvim │
                       ;; ╰────────────────────────╯

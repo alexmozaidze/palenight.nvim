@@ -80,6 +80,7 @@ Many plugins are supported, the most important ones being:
 - [nvim-hlslens][hlslens]
 - [modicator.nvim][modicator]
 - [marks.nvim][marks]
+- [nvim-cmp][nvim-cmp]
 
 For full list of supported plugins, see [groups.fnl][plugins-section].
 
@@ -135,8 +136,9 @@ It's not recommended you modify the internals, but you can, and no one can stop 
 Hop over on [discussions][discussions] and ask away!
 
 [discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
+[nvim-cmp]: https://github.com/hrsh7th/nvim-cmp
 [marks]: https://github.com/chentoast/marks.nvim
-[plugins-section]: fnl/palenight/groups.fnl#L343
+[plugins-section]: fnl/palenight/groups.fnl#L344
 [fennel]: https://fennel-lang.org/
 [modicator]: https://github.com/mawkler/modicator.nvim
 [hlslens]: https://github.com/kevinhwang91/nvim-hlslens
