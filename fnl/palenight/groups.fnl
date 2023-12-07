@@ -89,6 +89,7 @@
                       :DiagnosticWarn {:fg :yellow}
                       :DiagnosticInfo {:fg :white}
                       :DiagnosticHint {:fg :special}
+                      :DiagnosticDeprecated {:fg :comment :strikethrough true}
                       :DiagnosticVirtualTextError {:fg :red}
                       :DiagnosticVirtualTextWarn {:fg :yellow}
                       :DiagnosticVirtualTextInfo {:fg :white}
