@@ -447,10 +447,10 @@
                       :CmpItemKindConstant {:link "@constant"}
                       :CmpItemKindTypeParameter {:link "@lsp.type.parameter"}
                       :CmpItemKindOperator {:link "@operator"}
+                      :CmpItemKindModule {:link "@lsp.type.namespace"}
                       :CmpItemKindFile {:fg :dark_green}
                       :CmpItemKindFolder {:fg :green}
                       :CmpItemKindColor {:fg :dark_red}
-                      :CmpItemKindModule {:link "@lsp.type.namespace"}
                       :CmpItemKindSnippet {:fg :purple}
                       :CmpItemKindReference {:fg :cyan}
                       ;; ╭────────────────────────╮
