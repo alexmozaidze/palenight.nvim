@@ -268,6 +268,17 @@
                       :jsonNumError {:link "DiagnosticUnderlineError"}
                       :jsonStringSQError {:link "DiagnosticUnderlineError"}
                       :jsonSemicolonError {:link "DiagnosticUnderlineError"}
+                      ;; ╭───────╮
+                      ;; │ HJSON │
+                      ;; ╰───────╯
+                      :hjsonKeyword {:link "@property"}
+                      ;; ╭──────╮
+                      ;; │ YAML │
+                      ;; ╰──────╯
+                      :yamlBlockMappingKey {:link "@property"}
+                      :yamlPlainScalar {:link "@string"}
+                      :yamlKeyValueDelimiter {:link "@punctuation.delimiter"}
+                      :yamlBlockCollectionItemStart {:link "@punctuation.delimiter"}
                       ;; ╭──────╮
                       ;; │ TOML │
                       ;; ╰──────╯
