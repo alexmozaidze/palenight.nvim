@@ -116,9 +116,10 @@
                       "@lsp.type.method" {:link "@method"}
                       "@lsp.type.macro" {:link "@function.macro"}
                       "@lsp.type.type" {:link "@type"}
-                      "@lsp.typemod.variable.readonly.c" {:link "@constant"}
-                      "@lsp.typemod.variable.constant.rust" {:link "@constant"}
-                      "@lsp.typemod.variable.static.rust" {:link "@constant"}
+                      "@lsp.mod.readonly" {:link "@constant"}
+                      "@lsp.mod.constant" {:link "@constant"}
+                      "@lsp.mod.static" {:link "@constant"}
+                      ;; Makes unrecognized identifiers appear as errors
                       "@lsp.type.unresolvedReference.rust" {:link "DiagnosticUnderlineError"}
                       ;; This makes `math` and other builtin modules look like namespace identifiers.
                       "@lsp.mod.defaultLibrary.lua" {:link "@namespace"}
