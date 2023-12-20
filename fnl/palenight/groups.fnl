@@ -50,7 +50,7 @@
                       "@storageclass" {:fg :yellow}
                       "@string" {:fg :green}
                       "@string.escape" {:fg :special}
-                      "@string.regex" {:fg :white}
+                      "@string.regex" {:fg :green}
                       "@string.special" {:fg :special}
                       "@symbol" {:fg :red}
                       "@tag" {:fg :light_red}
