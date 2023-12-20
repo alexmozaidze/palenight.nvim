@@ -77,7 +77,7 @@
                       ;; Make Rust docstrings stand out a little
                       "@comment.documentation.rust" {:fg :special}
                       ;; Shell arguments look ugly when not colored as regular text
-                      "@parameter.bash" {}
+                      "@parameter.bash" {:fg :white}
                       ;; JSON parser likes to be all different, coloring properties as "@label".
                       "@label.json" {:link "@property"}
                       ;; INI files should not be colored with text highlights
