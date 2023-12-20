@@ -1,6 +1,6 @@
 ;;; ╭──────────────────────────────────────────────────────────╮
 ;;; │                  Fallback Colors (256)                   │
-;;; │                                                          │
+;;; │                  ─────────────────────                   │
 ;;; │   Shoutout to xtermcolor for helping me get this done    │
 ;;; │                     quick and easy!                      │
 ;;; │       https://github.com/broadinstitute/xtermcolor       │
