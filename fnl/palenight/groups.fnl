@@ -15,6 +15,7 @@
                       "@character" {:fg :green}
                       "@character.special" {:fg :blue_purple}
                       "@comment" {:fg :comment :italic true}
+                      "@comment.documentation" {:fg :special :italic true}
                       "@conditional" {:fg :purple}
                       "@constant" {:fg :cyan}
                       "@constant.builtin" {:fg :yellow}
@@ -74,8 +75,6 @@
                       "@variable.builtin" {:fg :orange}
                       ;; Make list chars ('*', '+' and '-'), as well as '>' to be colored specially.
                       "@punctuation.special.markdown" {:link "@operator"}
-                      ;; Make Rust docstrings stand out a little
-                      "@comment.documentation.rust" {:fg :special}
                       ;; Shell arguments look ugly when not colored as regular text
                       "@parameter.bash" {:fg :white}
                       ;; JSON parser likes to be all different, coloring properties as "@label".
