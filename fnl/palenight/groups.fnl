@@ -299,7 +299,7 @@
                       :markdownHeadingDelimiter {:link "@text.title"}
                       :markdownCode {:link "@text.literal"}
                       :markdownCodeBlock {:link "@string"}
-                      :markdownCodeDelimiter {}
+                      :markdownCodeDelimiter {:link "@punctuation.delimiter"}
                       :markdownRule {:link "@operator"}
                       :markdownHeadingRule {:link "@operator"}
                       :markdownJekyllFrontMatter {:link "@operator"}
@@ -311,7 +311,7 @@
                       :markdownUrl {:link "@text.uri"}
                       :markdownIdDeclaration {:link "@text.reference"}
                       :markdownLinkText {:link "@text.reference"}
-                      :markdownLinkDelimiter {}
+                      :markdownLinkDelimiter {:link "@punctuation.delimiter"}
                       ;; ╭───────────╮
                       ;; │ Gitconfig │
                       ;; ╰───────────╯
