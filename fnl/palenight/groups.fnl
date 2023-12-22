@@ -81,6 +81,11 @@
                       "@label.json" {:link "@property"}
                       ;; INI files should not be colored with text highlights
                       "@text.ini" {:link "@string"}
+                      ;; Comment notes highlighting (:TSInstall comment)
+                      "@text.todo.comment" {:fg :purple}
+                      "@text.note.comment" {:fg :white}
+                      "@text.warning.comment" {:fg :yellow}
+                      "@text.danger.comment" {:fg :red}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                           LSP                            ║
                       ;; ╚══════════════════════════════════════════════════════════╝
