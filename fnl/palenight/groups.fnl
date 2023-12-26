@@ -73,15 +73,15 @@
                       "@type.qualifier" {:fg :yellow}
                       "@variable" {:fg :white}
                       "@variable.builtin" {:fg :orange}
-                      ;; Make list chars ('*', '+' and '-'), as well as '>' to be colored specially.
+                      ;; Make list chars ('*', '+' and '-'), as well as '>' to be colored specially
                       "@punctuation.special.markdown" {:link "@operator"}
                       ;; Shell arguments look ugly when not colored as regular text
                       "@parameter.bash" {:fg :white}
-                      ;; JSON parser likes to be all different, coloring properties as "@label".
+                      ;; JSON parser likes to be all different, coloring properties as "@label"
                       "@label.json" {:link "@property"}
                       ;; INI files should not be colored with text highlights
                       "@text.ini" {:link "@string"}
-                      ;; Comment notes highlighting (:TSInstall comment)
+                      ;; Comment notes highlighting. (:TSInstall comment)
                       "@text.todo.comment" {:fg :purple}
                       "@text.note.comment" {:fg :white}
                       "@text.warning.comment" {:fg :yellow}
@@ -126,7 +126,7 @@
                       "@lsp.mod.static" {:link "@constant"}
                       ;; Makes unrecognized identifiers appear as errors
                       "@lsp.type.unresolvedReference.rust" {:link "DiagnosticUnderlineError"}
-                      ;; This makes `math` and other builtin modules look like namespace identifiers.
+                      ;; This makes `math` and other builtin modules look like namespace identifiers
                       "@lsp.mod.defaultLibrary.lua" {:link "@namespace"}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                  Built-in syntax groups                  ║
@@ -333,8 +333,8 @@
                       ;; ╭──────────────────╮
                       ;; │ Git highlighting │
                       ;; ╰──────────────────╯
-                      ;; NOTE: I am not sure wether or not this is for a plugin, or if it's built-in highlights.
-                      ;; TODO: Make sure these colors are consistent.
+                      ;; NOTE: I am not sure wether or not this is for a plugin, or if it's built-in highlights
+                      ;; TODO: Make sure these colors are consistent
                       :gitcommitComment {:link "@comment"}
                       :gitcommitUnmerged {:fg :green}
                       :gitcommitOnBranch {}
@@ -385,7 +385,7 @@
                       ;; ╭──────────────────────╮
                       ;; │ liuchengxu/vista.vim │
                       ;; ╰──────────────────────╯
-                      ;; TODO: Make sure these colors are consistent.
+                      ;; TODO: Make sure these colors are consistent
                       :VistaBracket {:fg :purple}
                       :VistaChildrenNr {:fg :orange}
                       :VistaScope {:fg :blue_purple}
@@ -401,7 +401,7 @@
                       ;; ╭───────────╮
                       ;; │ termdebug │
                       ;; ╰───────────╯
-                      ;; TODO: Make sure these colors are consistent.
+                      ;; TODO: Make sure these colors are consistent
                       :debugBreakpoint {:fg :blue_purple}
                       :debugPC {:bg :blue_purple :fg :black}
                       ;; ╭────────────────────────────────────────────────────╮
