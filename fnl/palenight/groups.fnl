@@ -128,6 +128,15 @@
                       "@lsp.type.unresolvedReference.rust" {:link "DiagnosticUnderlineError"}
                       ;; This makes `math` and other builtin modules look like namespace identifiers
                       "@lsp.mod.defaultLibrary.lua" {:link "@namespace"}
+                      ;; Disabling constant and variable highlighting in JS/TS
+                      ;;
+                      ;; There are 2 reasons for this:
+                      ;; 1. let Tree-sitter highlight variables/constants, which is dependant on its name's casing
+                      ;; 2. prevent every f*cking `const` to be colored as a constant, even if it's a function
+                      "@lsp.mod.readonly.javascript" {}
+                      "@lsp.type.variable.javascript" {}
+                      "@lsp.mod.readonly.typescript" {}
+                      "@lsp.type.variable.typescript" {}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                  Built-in syntax groups                  ║
                       ;; ╚══════════════════════════════════════════════════════════╝
