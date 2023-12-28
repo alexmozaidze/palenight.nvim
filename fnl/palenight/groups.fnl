@@ -73,19 +73,20 @@
                       "@type.qualifier" {:fg :yellow}
                       "@variable" {:fg :white}
                       "@variable.builtin" {:fg :orange}
-                      ;; Make list chars ('*', '+' and '-'), as well as '>' to be colored specially
-                      "@punctuation.special.markdown" {:link "@operator"}
-                      ;; Shell arguments look ugly when not colored as regular text
-                      "@parameter.bash" {:fg :white}
-                      ;; JSON parser likes to be all different, coloring properties as "@label"
-                      "@label.json" {:link "@property"}
-                      ;; INI files should not be colored with text highlights
-                      "@text.ini" {:link "@string"}
-                      ;; Comment notes highlighting. (:TSInstall comment)
+                      ;; Comment notes (:TSInstall comment)
                       "@text.todo.comment" {:fg :purple}
                       "@text.note.comment" {:fg :white}
                       "@text.warning.comment" {:fg :yellow}
                       "@text.danger.comment" {:fg :red}
+                      ;; (Markdown) List and quote punctuation
+                      "@punctuation.special.markdown" {:link "@operator"}
+                      ;; (Shell) Shell arguments are just text, not @parameter
+                      "@parameter.bash" {:fg :white}
+                      ;; (JSON) Keys are always properties
+                      "@label.json" {:link "@property"}
+                      ;; (INI) Data file text should look like @string, otherwise
+                      ;; it looks like an identifier/variable
+                      "@text.ini" {:link "@string"}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                           LSP                            ║
                       ;; ╚══════════════════════════════════════════════════════════╝
@@ -121,25 +122,20 @@
                       "@lsp.type.method" {:link "@method"}
                       "@lsp.type.macro" {:link "@function.macro"}
                       "@lsp.type.type" {:link "@type"}
-                      "@lsp.mod.readonly" {:link "@constant"}
-                      "@lsp.mod.constant" {:link "@constant"}
-                      "@lsp.mod.static" {:link "@constant"}
-                      ;; Highlight Lua builtin modules as a namespace
+                      ;; NOTE: Constant highlight groups have higher priority, so we only target
+                      ;; "variable" constants in order to avoid highlighting constant functions as constants,
+                      ;; since that would be quite misleading
+                      "@lsp.typemod.variable.readonly" {:link "@constant"}
+                      "@lsp.typemod.variable.constant" {:link "@constant"}
+                      "@lsp.typemod.variable.static" {:link "@constant"}
+                      ;; (Lua) Builtin modules (math, io, etc.)
                       "@lsp.mod.defaultLibrary.lua" {:link "@namespace.builtin"}
-                      ;; Highlight Lua builtin functions as @function.builtin
+                      ;; (Lua) Builtin functions (unpack)
                       "@lsp.typemod.function.defaultLibrary.lua" {:link "@function.builtin"}
-                      ;; Highlight JS/TS `const` as variable, since they're often used interchangeably
-                      ;;
-                      ;; Article that explains the difference between `let` and `const`:
-                      ;; https://www.joshwcomeau.com/javascript/the-const-deception/
-                      "@lsp.mod.readonly.javascript" {:link "@lsp.type.variable"}
-                      "@lsp.mod.readonly.typescript" {:link "@lsp.type.variable"}
-                      ;; Fix `const x = () => {}` highlighting (@constant takes priority by default)
-                      "@lsp.typemod.function.readonly.javascript" {:link "@lsp.type.function"}
-                      "@lsp.typemod.function.readonly.typescript" {:link "@lsp.type.function"}
-                      ;; Highlight builtin variables and objects with @x.builtin
+                      ;; (JS/TS) Builtin variables (console, document, etc.)
                       "@lsp.typemod.variable.defaultLibrary.javascript" {:link "@variable.builtin"}
                       "@lsp.typemod.variable.defaultLibrary.typescript" {:link "@variable.builtin"}
+                      ;; (JS/TS) Builtin objects (Object, Array, etc.)
                       "@lsp.typemod.class.defaultLibrary.javascript" {:link "@type.builtin"}
                       "@lsp.typemod.class.defaultLibrary.typescript" {:link "@type.builtin"}
                       ;; ╔══════════════════════════════════════════════════════════╗
