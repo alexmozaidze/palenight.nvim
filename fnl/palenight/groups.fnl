@@ -124,19 +124,24 @@
                       "@lsp.mod.readonly" {:link "@constant"}
                       "@lsp.mod.constant" {:link "@constant"}
                       "@lsp.mod.static" {:link "@constant"}
-                      ;; Makes unrecognized identifiers appear as errors
-                      "@lsp.type.unresolvedReference.rust" {:link "DiagnosticUnderlineError"}
-                      ;; This makes `math` and other builtin modules look like namespace identifiers
-                      "@lsp.mod.defaultLibrary.lua" {:link "@namespace"}
-                      ;; Disabling constant and variable highlighting in JS/TS
+                      ;; Highlight Lua builtin modules as a namespace
+                      "@lsp.mod.defaultLibrary.lua" {:link "@namespace.builtin"}
+                      ;; Highlight Lua builtin functions as @function.builtin
+                      "@lsp.typemod.function.defaultLibrary.lua" {:link "@function.builtin"}
+                      ;; Highlight JS/TS `const` as variable, since they're often used interchangeably
                       ;;
-                      ;; There are 2 reasons for this:
-                      ;; 1. let Tree-sitter highlight variables/constants, which is dependant on its name's casing
-                      ;; 2. prevent every f*cking `const` to be colored as a constant, even if it's a function
-                      "@lsp.mod.readonly.javascript" {}
-                      "@lsp.type.variable.javascript" {}
-                      "@lsp.mod.readonly.typescript" {}
-                      "@lsp.type.variable.typescript" {}
+                      ;; Article that explains the difference between `let` and `const`:
+                      ;; https://www.joshwcomeau.com/javascript/the-const-deception/
+                      "@lsp.mod.readonly.javascript" {:link "@lsp.type.variable"}
+                      "@lsp.mod.readonly.typescript" {:link "@lsp.type.variable"}
+                      ;; Fix `const x = () => {}` highlighting (@constant takes priority by default)
+                      "@lsp.typemod.function.readonly.javascript" {:link "@lsp.type.function"}
+                      "@lsp.typemod.function.readonly.typescript" {:link "@lsp.type.function"}
+                      ;; Highlight builtin variables and objects with @x.builtin
+                      "@lsp.typemod.variable.defaultLibrary.javascript" {:link "@variable.builtin"}
+                      "@lsp.typemod.variable.defaultLibrary.typescript" {:link "@variable.builtin"}
+                      "@lsp.typemod.class.defaultLibrary.javascript" {:link "@type.builtin"}
+                      "@lsp.typemod.class.defaultLibrary.typescript" {:link "@type.builtin"}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                  Built-in syntax groups                  ║
                       ;; ╚══════════════════════════════════════════════════════════╝
