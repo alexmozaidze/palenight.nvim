@@ -479,6 +479,10 @@
                       :CmpItemKindColor {:fg :dark_red}
                       :CmpItemKindSnippet {:fg :purple}
                       :CmpItemKindReference {:fg :cyan}
+                      ;; ╭─────────────────────╮
+                      ;; │ cbochs/portal.nvim  │
+                      ;; ╰─────────────────────╯
+                      :PortalLabel {:link "CurSearch"}
                       ;; ╭────────────────────────╮
                       ;; │ mawkler/modicator.nvim │
                       ;; ╰────────────────────────╯
