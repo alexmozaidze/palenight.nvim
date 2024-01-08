@@ -203,6 +203,8 @@
                       :MoreMsg {}
                       :NonText {:fg :comment}
                       :Normal {:fg :white :bg :black}
+                      :NormalFloat {:bg :menu}
+                      :FloatBorder {:bg :menu}
                       :Pmenu {:bg :menu}
                       :PmenuSel {:fg :black :bg :blue}
                       :PmenuSbar {:bg :special}
