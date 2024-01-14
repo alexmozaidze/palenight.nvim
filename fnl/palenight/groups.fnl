@@ -122,6 +122,7 @@
                       "@lsp.type.method" {:link "@method"}
                       "@lsp.type.macro" {:link "@function.macro"}
                       "@lsp.type.type" {:link "@type"}
+                      "@lsp.typemod.comment.documentation" {:link "@comment.documentation"}
                       ;; NOTE: Constant highlight groups have higher priority, so we only target
                       ;; "variable" constants in order to avoid highlighting constant functions as constants,
                       ;; since that would be quite misleading
