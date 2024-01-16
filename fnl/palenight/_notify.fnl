@@ -11,10 +11,10 @@
         ((require :notify) message log-level {:title plugin-title})
         (vim.notify (.. plugin-title ": " message) log-level))))
 
-(lambda M.warn [message]
+(lambda M.notify-warn [message]
   (M.notify message vim.log.levels.WARN))
 
-(lambda M.error [message]
+(lambda M.notify-error [message]
   (M.notify message vim.log.levels.ERROR))
 
 M

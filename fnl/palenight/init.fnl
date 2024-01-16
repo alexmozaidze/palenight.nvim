@@ -1,5 +1,5 @@
 (local {: config : setup} (require :palenight/_config))
-(local {: warn : messages} (require :palenight/_notify))
+(local {: notify-warn : messages} (require :palenight/_notify))
 (local {: supported-nvim-version?} (require :palenight/_checks))
 
 (local M {})
@@ -8,7 +8,7 @@
 
 (lambda M.load []
   (when (not (supported-nvim-version?))
-    (warn messages.unsupported-nvim-version))
+    (notify-warn messages.unsupported-nvim-version))
   (when vim.g.colors_name
     (vim.cmd.hi :clear))
   (set vim.g.colors_name :palenight)
