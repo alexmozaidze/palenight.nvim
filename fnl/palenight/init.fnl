@@ -9,8 +9,6 @@
 (lambda M.load []
   (when (not (supported-nvim-version?))
     (warn messages.unsupported-nvim-version))
-  (when (= :light vim.opt.background)
-    (warn messages.unsupported-light-theme))
   (when vim.g.colors_name
     (vim.cmd.hi :clear))
   (set vim.g.colors_name :palenight)

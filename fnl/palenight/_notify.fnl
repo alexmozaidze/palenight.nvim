@@ -3,7 +3,6 @@
 (local M {})
 
 (set M.messages {:unsupported-nvim-version "Only nvim >=0.8 is supported. Proceed at your own risk!"
-                 :unsupported-light-theme "Light theme is unsupported. Set `background` to `dark`."
                  :invalid-cterm-option "Invalid `cterm_palette` option"})
 
 (lambda M.notify [message log-level]
