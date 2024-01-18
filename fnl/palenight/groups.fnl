@@ -84,6 +84,7 @@
                       "@parameter.bash" {:fg :white}
                       ;; (JSON) Keys are always properties
                       "@label.json" {:link "@property"}
+                      "@keyword.json5" {:link "@property"}
                       ;; (INI) Data file text should look like @string, otherwise
                       ;; it looks like an identifier/variable
                       "@text.ini" {:link "@string"}
