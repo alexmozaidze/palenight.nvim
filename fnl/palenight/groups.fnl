@@ -9,85 +9,132 @@
                      {;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                       Tree-sitter                        ║
                       ;; ╚══════════════════════════════════════════════════════════╝
-                      "@annotation" {:fg :yellow}
-                      "@attribute" {:fg :light_red}
-                      "@boolean" {:fg :red :italic true}
-                      "@character" {:fg :green}
-                      "@character.special" {:fg :blue_purple}
-                      "@comment" {:fg :comment :italic true}
-                      "@comment.documentation" {:fg :special :italic true}
-                      "@conditional" {:fg :purple}
+                      ;; ╭─────────────╮
+                      ;; │ Identifiers │
+                      ;; ╰─────────────╯
+                      "@variable" {:fg :white}
+                      "@variable.builtin" {:fg :orange}
+                      "@variable.parameter" {:fg :orange}
+                      "@variable.member" {:fg :cyan}
                       "@constant" {:fg :cyan}
                       "@constant.builtin" {:fg :yellow}
                       "@constant.macro" {:fg :orange}
-                      "@constructor" {:fg :white}
-                      "@macro" {:fg :purple}
-                      "@define" {:fg :purple}
-                      "@exception" {:fg :purple}
-                      "@field" {:fg :cyan}
-                      "@float" {:fg :orange}
+                      "@module" {:fg :blue_purple}
+                      "@module.builtin" {:fg :blue_purple}
+                      "@label" {:fg :purple}
+                      ;; ╭──────────╮
+                      ;; │ Literals │
+                      ;; ╰──────────╯
+                      "@string" {:fg :green}
+                      "@string.documentation" {:fg :dark_green}
+                      "@string.regexp" {:fg :green}
+                      ;; TODO: Audit @string.special.* highlights to be correct
+                      "@string.escape" {:fg :special}
+                      "@string.special" {:fg :special}
+                      "@string.special.symbol" {:fg :white}
+                      "@string.special.url" {:fg :dark_green :underline true}
+                      "@string.special.path" {:fg :dark_green}
+                      "@character" {:fg :green}
+                      "@character.special" {:fg :blue_purple}
+                      "@boolean" {:fg :red :italic true}
+                      "@number" {:fg :orange}
+                      "@number.float" {:fg :orange}
+                      ;; ╭───────╮
+                      ;; │ Types │
+                      ;; ╰───────╯
+                      "@type" {:fg :yellow}
+                      "@type.builtin" {:fg :orange}
+                      "@type.definition" {:fg :yellow}
+                      "@type.qualifier" {:fg :yellow}
+                      "@attribute" {:fg :light_red}
+                      "@property" {:fg :cyan}
+                      ;; ╭───────────╮
+                      ;; │ Functions │
+                      ;; ╰───────────╯
                       "@function" {:fg :blue}
                       "@function.builtin" {:fg :cyan}
                       "@function.call" {:fg :blue}
                       "@function.macro" {:fg :purple :italic true}
-                      "@include" {:fg :blue}
-                      "@keyword" {:fg :red}
-                      "@keyword.function" {:fg :blue_purple}
-                      "@keyword.return" {:fg :red}
-                      "@keyword.operator" {:fg :purple}
+                      "@function.method" {:fg :blue}
+                      "@function.method.call" {:fg :blue}
+                      ;; TODO: Make sure @constructor is correctly highlighted
+                      "@constructor" {:fg :white}
                       "@operator" {:fg :purple}
-                      "@label" {:fg :purple}
-                      "@method" {:fg :blue}
-                      "@method.call" {:fg :blue}
-                      "@namespace" {:fg :blue_purple}
-                      "@number" {:fg :orange}
-                      "@parameter" {:fg :orange}
-                      "@property" {:fg :cyan}
-                      "@punctuation.bracket" {:fg :white}
+                      ;; ╭──────────╮
+                      ;; │ Keywords │
+                      ;; ╰──────────╯
+                      "@keyword" {:fg :red}
+                      ;; TODO: Experiment with colors for @keyword.coroutine
+                      "@keyword.coroutine" {:fg :dark_red}
+                      "@keyword.function" {:fg :blue_purple}
+                      "@keyword.operator" {:fg :purple}
+                      "@keyword.import" {:fg :red}
+                      ;; TODO: Make sure @keyword.storage is correctly highlighted
+                      "@keyword.storage" {:fg :yellow}
+                      "@keyword.repeat" {:fg :purple}
+                      "@keyword.return" {:fg :red}
+                      "@keyword.debug" {:fg :purple}
+                      "@keyword.exception" {:fg :red}
+                      "@keyword.conditional" {:fg :purple}        ; keywords related to conditionals (e.g. `if` / `else`)
+                      "@keyword.conditional.ternary" {:fg :purple} ; ternary operator (e.g. `?` / `:`)
+                      "@keyword.directive" {:fg :purple}
+                      "@keyword.directive.define" {:fg :purple}
+                      ;; ╭─────────────╮
+                      ;; │ Punctuation │
+                      ;; ╰─────────────╯
                       "@punctuation.delimiter" {:fg :white}
+                      "@punctuation.bracket" {:fg :white}
                       "@punctuation.special" {:fg :white}
-                      "@repeat" {:fg :purple}
-                      "@storageclass" {:fg :yellow}
-                      "@string" {:fg :green}
-                      "@string.escape" {:fg :special}
-                      "@string.regex" {:fg :green}
-                      "@string.special" {:fg :special}
-                      "@symbol" {:fg :red}
-                      "@tag" {:fg :light_red}
-                      "@tag.attribute" {:fg :yellow}
-                      "@tag.delimiter" {:fg :white}
-                      "@text.danger" {:fg :orange}
-                      "@text.emphasis" {:italic true}
-                      "@text.environment" {:fg :light_red}
-                      "@text.environment.name" {:fg :cyan}
-                      "@text.literal" {:fg :yellow}
-                      "@text.reference" {:fg :cyan}
-                      "@text.strike" {:strikethrough true}
-                      "@text.strong" {:bold true}
-                      "@text.title" {:fg :yellow :bold true}
-                      "@text.underline" {:underline true}
-                      "@text.warning" {:fg :yellow}
-                      "@text.todo" {:fg :purple}
-                      "@type" {:fg :yellow}
-                      "@type.builtin" {:fg :orange}
-                      "@type.qualifier" {:fg :yellow}
-                      "@variable" {:fg :white}
-                      "@variable.builtin" {:fg :orange}
-                      ;; Comment notes (:TSInstall comment)
-                      "@text.todo.comment" {:fg :purple}
-                      "@text.note.comment" {:fg :white}
-                      "@text.warning.comment" {:fg :yellow}
-                      "@text.danger.comment" {:fg :red}
-                      ;; (Markdown) List and quote punctuation
-                      "@punctuation.special.markdown" {:link "@operator"}
-                      ;; (Shell) Shell arguments are just text, not @parameter
-                      "@parameter.bash" {:fg :white}
-                      ;; (JSON) Keys are always properties
-                      "@label.json" {:link "@property"}
-                      "@keyword.json5" {:link "@property"}
-                      ;; (INI) Data file text should look like @string, otherwise
-                      ;; it looks like an identifier/variable
-                      "@text.ini" {:link "@string"}
+                      ;; ╭──────────╮
+                      ;; │ Comments │
+                      ;; ╰──────────╯
+                      "@comment" {:fg :comment :italic true}
+                      "@comment.documentation" {:fg :special}
+                      "@comment.error" {:fg :red}
+                      "@comment.warning" {:fg :yellow}
+                      "@comment.hint" {:fg :white}
+                      "@comment.info" {:fg :cyan}
+                      "@comment.todo" {:fg :purple}
+                      ;; ╭────────╮
+                      ;; │ Markup │
+                      ;; ╰────────╯
+                      "@markup.strong" {:bold true}
+                      "@markup.italic" {:italic true}
+                      "@markup.strikethrough" {:strikethrough true}
+                      "@markup.underline" {:underline true}
+                      "@markup.heading" {:fg :yellow :bold true}
+                      "@markup.quote" {:fg :white}         ; block quotes
+                      "@markup.math" {:fg :blue}          ; math environments (e.g. `$ ... $` in LaTeX)
+                      "@markup.environment" {:fg :blue}   ; environments (e.g. in LaTeX)
+                      "@markup.link" {:fg :cyan}          ; text references, footnotes, citations, etc.
+                      "@markup.link.label" {:fg :blue}     ; link, reference descriptions
+                      "@markup.link.url" {:underline true}       ; URL-style links
+                      "@markup.raw" {:fg :blue_purple}            ; literal or verbatim text (e.g., inline code)
+                      "@markup.raw.block" {:fg :green}     ; literal or verbatim text as a stand-alone block
+                      "@markup.list" {:fg :purple}          ; list markers
+                      "@markup.list.checked" {:fg :green}  ; checked todo-style list markers
+                      "@markup.list.unchecked" {:fg :yellow} ; unchecked todo-style list markers
+                      "@diff.plus" {:bg :green :fg :black}
+                      "@diff.minus" {:bg :red :fg :black}
+                      "@diff.delta" {:bg :yellow :fg :black}
+                      "@tag" {:fg :light_red}           ; XML-style tag names (and similar)
+                      "@tag.attribute" {:fg :yellow} ; XML-style tag attributes
+                      "@tag.delimiter" {:fg :white} ; XML-style tag delimiters
+                      ;; ╭───────────────────────────╮
+                      ;; │ Non-highlighting captures │
+                      ;; ╰───────────────────────────╯
+                      "@none" {:fg :white :bg :black}    ; completely disable the highlight
+                      ;; TODO: Figure out what to do with this
+                      "@conceal" {} ; captures that are only meant to be concealed
+                      "@spell" {}   ; for defining regions to be spellchecked
+                      "@nospell" {} ; for defining regions that should NOT be spellchecked
+                      ;; ╭──────────────────────────────╮
+                      ;; │ Filetype-specific highlights │
+                      ;; ╰──────────────────────────────╯
+                      ;; (Shell) Shell arguments are just text
+                      "@variable.parameter.bash" {:fg :white}
+                      ;; (Markdown) Special characters (`>`, `---`, etc.)
+                      "@punctuation.special.markdown" {:link "@keyword"}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║                           LSP                            ║
                       ;; ╚══════════════════════════════════════════════════════════╝
@@ -111,8 +158,8 @@
                       "@lsp.type.typeParameter" {}
                       "@lsp.type.enum" {:link "@type"}
                       "@lsp.type.enumMember" {:link "@constant"}
-                      "@lsp.type.parameter" {:link "@parameter"}
-                      "@lsp.type.namespace" {:link "@namespace"}
+                      "@lsp.type.parameter" {:link "@variable.parameter"}
+                      "@lsp.type.namespace" {:link "@module"}
                       "@lsp.type.interface" {:link "@type"}
                       "@lsp.type.decorator" {:link "@type"}
                       "@lsp.type.property" {:link "@property"}
@@ -120,18 +167,18 @@
                       "@lsp.type.comment" {:link "@comment"}
                       "@lsp.type.class" {:link "@type"}
                       "@lsp.type.struct" {:link "@type"}
-                      "@lsp.type.method" {:link "@method"}
+                      "@lsp.type.method" {:link "@function.method"}
                       "@lsp.type.macro" {:link "@function.macro"}
                       "@lsp.type.type" {:link "@type"}
                       "@lsp.typemod.comment.documentation" {:link "@comment.documentation"}
-                      ;; NOTE: Constant highlight groups have higher priority, so we only target
+                      ;; Constant highlight groups have higher priority, so we only target
                       ;; "variable" constants in order to avoid highlighting constant functions as constants,
                       ;; since that would be quite misleading
                       "@lsp.typemod.variable.readonly" {:link "@constant"}
                       "@lsp.typemod.variable.constant" {:link "@constant"}
                       "@lsp.typemod.variable.static" {:link "@constant"}
                       ;; (Lua) Builtin modules (math, io, etc.)
-                      "@lsp.mod.defaultLibrary.lua" {:link "@namespace.builtin"}
+                      "@lsp.mod.defaultLibrary.lua" {:link "@module.builtin"}
                       ;; (Lua) Builtin functions (unpack)
                       "@lsp.typemod.function.defaultLibrary.lua" {:link "@function.builtin"}
                       ;; (JS/TS) Builtin variables (console, document, etc.)
@@ -149,24 +196,24 @@
                       :Character {:link "@string"}
                       :Number {:link "@number"}
                       :Boolean {:link "@boolean"}
-                      :Float {:link "@float"}
+                      :Float {:link "@number.float"}
                       ;; Identifier usually presumes a variable
-                      :Identifier {:link "@symbol"}
+                      :Identifier {:link "@variable"}
                       :Function {:link "@function"}
                       :Statement {:fg :purple}
-                      :Conditional {:link "@conditional"}
-                      :Repeat {:link "@repeat"}
+                      :Conditional {:link "@keyword.conditional"}
+                      :Repeat {:link "@keyword.repeat"}
                       :Label {:link "@label"}
                       :Operator {:link "@operator"}
                       :Keyword {:link "@keyword"}
-                      :Exception {:link "@exception"}
+                      :Exception {:link "@keyword.exception"}
                       :PreProc {:link "@macro"}
-                      :Include {:link "@include"}
-                      :Define {:link "@define"}
+                      :Include {:link "@keyword.import"}
+                      :Define {:link "@keyword.directive.define"}
                       :Macro {:link "@macro"}
                       :PreCondit {:link "@macro"}
                       :Type {:link "@type"}
-                      :StorageClass {:link "@storageclass"}
+                      :StorageClass {:link "@keyword.storage"}
                       :Structure {:link "@type"}
                       :Typedef {:link "@type"}
                       :Special {:fg :blue}
@@ -175,10 +222,10 @@
                       :Delimiter {:link "@punctuation.delimiter"}
                       :SpecialComment {:fg :special}
                       :Debug {}
-                      :Underlined {:link "@text.underline"}
+                      :Underlined {:link "@markup.underline"}
                       :Ignore {}
                       :Error {:link "DiagnosticError"}
-                      :Todo {:link "@text.todo"}
+                      :Todo {:link "@comment.todo"}
                       ;; ╔══════════════════════════════════════════════════════════╗
                       ;; ║               Special highlights and menus               ║
                       ;; ╚══════════════════════════════════════════════════════════╝
@@ -224,7 +271,7 @@
                       :TabLine {:fg :comment}
                       :TabLineFill {}
                       :TabLineSel {:fg :white}
-                      :Title {:link "@text.title"}
+                      :Title {:link "@markup.heading"}
                       :Visual {:bg :highlight}
                       :VisualNOS {:bg :highlight}
                       :WarningMsg {:fg :yellow}
@@ -257,8 +304,8 @@
                       ;; ╰──────╯
                       :htmlTagName {:link "@tag"}
                       :htmlArg {:link "@tag.attribute"}
-                      :htmlTitle {:link "@text.title"}
-                      :htmlLink {:link "@text.uri"}
+                      :htmlTitle {:link "@markup.heading"}
+                      :htmlLink {:link "@markup.link.url"}
                       :htmlSpecialTagName {:link "@tag"}
                       ;; `<` and `/>`
                       :htmlTag {:link "@punctuation.delimiter"}
@@ -315,8 +362,8 @@
                       ;; ╭──────────╮
                       ;; │ Markdown │
                       ;; ╰──────────╯
-                      :markdownHeadingDelimiter {:link "@text.title"}
-                      :markdownCode {:link "@text.literal"}
+                      :markdownHeadingDelimiter {:link "@markup.heading"}
+                      :markdownCode {:link "@markup.raw"}
                       :markdownCodeBlock {:link "@string"}
                       :markdownCodeDelimiter {:link "@punctuation.delimiter"}
                       :markdownRule {:link "@operator"}
@@ -324,12 +371,12 @@
                       :markdownJekyllFrontMatter {:link "@operator"}
                       :markdownOrderedListMarker {:link "@operator"}
                       :markdownListMarker {:link "@operator"}
-                      :markdownId {:link "@text.reference"}
+                      :markdownId {:link "@markup.link"}
                       :markdownBlockquote {:link "@operator"}
-                      :markdownItalic {:link "@text.emphasis"}
-                      :markdownUrl {:link "@text.uri"}
-                      :markdownIdDeclaration {:link "@text.reference"}
-                      :markdownLinkText {:link "@text.reference"}
+                      :markdownItalic {:link "@markup.italic"}
+                      :markdownUrl {:link "@markup.link.url"}
+                      :markdownIdDeclaration {:link "@markup.link"}
+                      :markdownLinkText {:link "@markup.link"}
                       :markdownLinkDelimiter {:link "@punctuation.delimiter"}
                       ;; ╭───────────╮
                       ;; │ Gitconfig │
@@ -461,7 +508,7 @@
                       :CmpItemAbbrMatch {:fg :blue}
                       :CmpItemAbbrMatchFuzzy {:link "CmpItemAbbrMatch"}
                       :CmpItemAbbrDeprecated {:link "DiagnosticDeprecated"}
-                      :CmpItemKindText {:link "@text"}
+                      :CmpItemKindText {:link "Normal"}
                       :CmpItemKindKeyword {:link "@keyword"}
                       :CmpItemKindVariable {:link "@lsp.type.variable"}
                       :CmpItemKindProperty {:link "@lsp.type.property"}
@@ -469,7 +516,7 @@
                       :CmpItemKindClass {:link "@lsp.type.class"}
                       :CmpItemKindStruct {:link "@lsp.type.struct"}
                       :CmpItemKindMethod {:link "@lsp.type.method"}
-                      :CmpItemKindField {:link "@field"}
+                      :CmpItemKindField {:link "@variable.member"}
                       :CmpItemKindInterface {:link "@lsp.type.interface"}
                       :CmpItemKindConstructor {:link "@constructor"}
                       :CmpItemKindEnum {:link "@lsp.type.enum"}
