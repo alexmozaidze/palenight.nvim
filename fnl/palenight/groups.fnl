@@ -92,9 +92,8 @@
    "@comment.documentation" {:fg :special}
    "@comment.error" {:fg :red}
    "@comment.warning" {:fg :yellow}
-   "@comment.hint" {:fg :white}
-   "@comment.info" {:fg :cyan}
    "@comment.todo" {:fg :purple}
+   "@comment.note" {:fg :white}
    ;; ╭────────╮
    ;; │ Markup │
    ;; ╰────────╯
