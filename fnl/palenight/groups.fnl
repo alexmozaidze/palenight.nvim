@@ -32,7 +32,7 @@
    "@string.escape" {:fg :special}
    "@string.special" {:fg :special}
    "@string.special.symbol" {:fg :white}
-   "@string.special.url" {:fg :dark_green :underline true}
+   "@string.special.url" {:underline true}
    "@string.special.path" {:fg :dark_green}
    "@character" {:fg :green}
    "@character.special" {:fg :blue_purple}
