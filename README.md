@@ -24,6 +24,9 @@ vim.opt.background = "dark"
 
 ## Installation
 
+> [!IMPORTANT]\
+> If you are using an old version of nvim-treesitter (the one which uses an old capture naming scheme), pin palenight.nvim to `old-naming-scheme` tag.
+
 <details><summary>Lazy</summary>
 
 ```lua
