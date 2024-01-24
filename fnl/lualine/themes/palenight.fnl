@@ -1,7 +1,7 @@
 ;; FIX: This file is quite a mess...
 
 (local {: require-cterm} (require :palenight/_colors))
-(local {: config} (require :palenight/_config))
+(local {: opts} (require :palenight/_config))
 
 (local colors (require :palenight/colors/truecolor))
 (local colors-cterm (require-cterm))
@@ -11,13 +11,13 @@
              colors-cterm))
 
 (lambda active-mode-bg []
-  (if (= config.cterm_palette 16)
+  (if (= opts.cterm_palette 16)
       c.black
       c.menu))
 
 ;; Bold doesn't look great in tty
 (lambda get-bold []
-  (if (not= config.cterm_palette 16)
+  (if (not= opts.cterm_palette 16)
       :bold
       nil))
 

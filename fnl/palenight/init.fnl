@@ -1,10 +1,10 @@
-(local {: config : setup} (require :palenight/_config))
+(local config (require :palenight/_config))
 (local {: notify-warn : messages} (require :palenight/_notify))
 (local {: supported-nvim-version?} (require :palenight/_checks))
 
 (local M {})
 
-(set M.setup setup)
+(set M.setup config.setup)
 
 (lambda M.load []
   (when (not (supported-nvim-version?))
@@ -15,7 +15,7 @@
   (let [groups (require :palenight/groups)]
     (each [group hl (pairs groups)]
       (local hl (vim.deepcopy hl))
-      (set hl.italic (and config.italic hl.italic))
+      (set hl.italic (and config.opts.italic hl.italic))
       (vim.api.nvim_set_hl 0 group hl))))
 
 M

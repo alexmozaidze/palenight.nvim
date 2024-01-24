@@ -22,8 +22,8 @@
 
 (lambda M.require-cterm [?palette]
   (let [notify (require :palenight/_notify)
-        {: config} (require :palenight/_config)
-        palette (or ?palette config.cterm_palette)]
+        {: opts} (require :palenight/_config)
+        palette (or ?palette opts.cterm_palette)]
     (match palette
       :auto (M.require-cterm (M.auto-cterm-palette))
       16 (require :palenight/colors/cterm16)
