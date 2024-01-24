@@ -1,7 +1,7 @@
 local _local_1_ = require("palenight/_colors")
 local require_cterm = _local_1_["require-cterm"]
 local _local_2_ = require("palenight/_config")
-local config = _local_2_["config"]
+local opts = _local_2_["opts"]
 local colors = require("palenight/colors/truecolor")
 local colors_cterm = require_cterm()
 local c
@@ -11,14 +11,14 @@ else
 	c = colors_cterm
 end
 local function active_mode_bg()
-	if (config.cterm_palette == 16) then
+	if (opts.cterm_palette == 16) then
 		return c.black
 	else
 		return c.menu
 	end
 end
 local function get_bold()
-	if (config.cterm_palette ~= 16) then
+	if (opts.cterm_palette ~= 16) then
 		return "bold"
 	else
 		return nil

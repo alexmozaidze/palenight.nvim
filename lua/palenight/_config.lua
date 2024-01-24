@@ -1,9 +1,9 @@
 local M = {}
-M.config = {cterm_palette = "auto", italic = false}
-M.setup = function(_3fuser_config)
-	local user_config = (_3fuser_config or {})
-	local new_config = vim.tbl_deep_extend("force", M.config, user_config)
-	M.config = new_config
+M.opts = {cterm_palette = "auto", italic = false}
+M.setup = function(_3fopts)
+	local opts = (_3fopts or {})
+	local new_opts = vim.tbl_deep_extend("force", M.opts, opts)
+	M.opts = new_opts
 	return nil
 end
 return M

@@ -25,8 +25,8 @@ end
 M["require-cterm"] = function(_3fpalette)
 	local notify = require("palenight/_notify")
 	local _let_4_ = require("palenight/_config")
-	local config = _let_4_["config"]
-	local palette = (_3fpalette or config.cterm_palette)
+	local opts = _let_4_["opts"]
+	local palette = (_3fpalette or opts.cterm_palette)
 	if (palette == "auto") then
 		return M["require-cterm"](M["auto-cterm-palette"]())
 	elseif (palette == 16) then
