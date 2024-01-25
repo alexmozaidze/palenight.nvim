@@ -246,7 +246,7 @@
    :IncSearch {:fg :yellow :bg :comment}
    :LineNr {:fg :line_number}
    :CursorLineNr {}
-   :MatchParen {:fg :blue :underline true}
+   :MatchParen {:fg :blue :underline true :bold true}
    :ModeMsg {}
    :MoreMsg {}
    :NonText {:fg :comment}
