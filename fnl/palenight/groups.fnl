@@ -64,8 +64,7 @@
    ;; │ Keywords │
    ;; ╰──────────╯
    "@keyword" {:fg :red}
-   ;; TODO: Experiment with colors for @keyword.coroutine
-   "@keyword.coroutine" {:fg :dark_red}
+   "@keyword.coroutine" {:fg :light_red}
    "@keyword.function" {:fg :blue_purple}
    "@keyword.operator" {:fg :purple}
    "@keyword.import" {:fg :red}
