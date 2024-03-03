@@ -28,15 +28,15 @@
    "@string" {:fg :green}
    "@string.documentation" {:fg :dark_green}
    "@string.regexp" {:fg :green}
-   ;; TODO: Audit @string.special.* highlights to be correct
    "@string.escape" {:fg :special}
    "@string.special" {:fg :special}
-   "@string.special.symbol" {:fg :white}
+   "@string.special.symbol" {:fg :light_red}
    "@string.special.url" {:underline true}
    "@string.special.path" {:fg :dark_green}
-   "@character" {:fg :green}
+   "@character" {:fg :dark_green}
    "@character.special" {:fg :blue_purple}
    "@boolean" {:fg :red :italic true}
+   ;; NOTE: Some parsers do not distinguish between numbers and floats
    "@number" {:fg :orange}
    "@number.float" {:fg :orange}
    ;; ╭───────╮
