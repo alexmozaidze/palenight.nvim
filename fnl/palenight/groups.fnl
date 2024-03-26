@@ -15,10 +15,11 @@
    "@variable" {:fg :white}
    "@variable.builtin" {:fg :orange}
    "@variable.parameter" {:fg :orange}
+   "@variable.parameter.builtin" {:fg :orange}
    "@variable.member" {:fg :cyan}
    "@constant" {:fg :cyan}
-   "@constant.builtin" {:fg :yellow}
-   "@constant.macro" {:fg :orange}
+   "@constant.builtin" {:fg :cyan}
+   "@constant.macro" {:fg :purple}
    "@module" {:fg :blue_purple}
    "@module.builtin" {:fg :blue_purple}
    "@label" {:fg :purple}
@@ -36,7 +37,6 @@
    "@character" {:fg :dark_green}
    "@character.special" {:fg :blue_purple}
    "@boolean" {:fg :red :italic true}
-   ;; NOTE: Some parsers do not distinguish between numbers and floats
    "@number" {:fg :orange}
    "@number.float" {:fg :orange}
    ;; ╭───────╮
@@ -45,8 +45,8 @@
    "@type" {:fg :yellow}
    "@type.builtin" {:fg :orange}
    "@type.definition" {:fg :yellow}
-   "@type.qualifier" {:fg :yellow}
    "@attribute" {:fg :light_red}
+   "@attribute.builtin" {:fg :red}
    "@property" {:fg :cyan}
    ;; ╭───────────╮
    ;; │ Functions │
@@ -67,14 +67,14 @@
    "@keyword.function" {:fg :blue_purple}
    "@keyword.operator" {:fg :purple}
    "@keyword.import" {:fg :red}
-   ;; TODO: Make sure @keyword.storage is correctly highlighted
-   "@keyword.storage" {:fg :yellow}
+   "@keyword.type" {:fg :red}
+   "@keyword.modifier" {:fg :light_red}
    "@keyword.repeat" {:fg :purple}
    "@keyword.return" {:fg :red}
    "@keyword.debug" {:fg :purple}
    "@keyword.exception" {:fg :red}
-   "@keyword.conditional" {:fg :purple}        ; keywords related to conditionals (e.g. `if` / `else`)
-   "@keyword.conditional.ternary" {:fg :purple} ; ternary operator (e.g. `?` / `:`)
+   "@keyword.conditional" {:fg :purple}
+   "@keyword.conditional.ternary" {:fg :purple}
    "@keyword.directive" {:fg :purple}
    "@keyword.directive.define" {:fg :purple}
    ;; ╭─────────────╮
@@ -100,31 +100,31 @@
    "@markup.strikethrough" {:strikethrough true}
    "@markup.underline" {:underline true}
    "@markup.heading" {:fg :yellow :bold true}
-   "@markup.quote" {:fg :white}         ; block quotes
-   "@markup.math" {:fg :blue}          ; math environments (e.g. `$ ... $` in LaTeX)
-   "@markup.environment" {:fg :blue}   ; environments (e.g. in LaTeX)
-   "@markup.link" {:fg :cyan}          ; text references, footnotes, citations, etc.
-   "@markup.link.label" {:fg :blue}     ; link, reference descriptions
-   "@markup.link.url" {:underline true}       ; URL-style links
-   "@markup.raw" {:fg :blue_purple}            ; literal or verbatim text (e.g., inline code)
-   "@markup.raw.block" {:fg :green}     ; literal or verbatim text as a stand-alone block
-   "@markup.list" {:fg :purple}          ; list markers
-   "@markup.list.checked" {:fg :green}  ; checked todo-style list markers
-   "@markup.list.unchecked" {:fg :yellow} ; unchecked todo-style list markers
+   "@markup.quote" {:fg :white}
+   "@markup.math" {:fg :blue}
+   "@markup.link" {:fg :cyan}
+   "@markup.link.label" {:fg :blue}
+   "@markup.link.url" {:underline true}
+   "@markup.raw" {:fg :blue_purple}
+   "@markup.raw.block" {:fg :green}
+   "@markup.list" {:fg :purple}
+   "@markup.list.checked" {:fg :green}
+   "@markup.list.unchecked" {:fg :yellow}
    "@diff.plus" {:bg :green :fg :black}
    "@diff.minus" {:bg :red :fg :black}
    "@diff.delta" {:bg :yellow :fg :black}
-   "@tag" {:fg :light_red}           ; XML-style tag names (and similar)
-   "@tag.attribute" {:fg :yellow} ; XML-style tag attributes
-   "@tag.delimiter" {:fg :white} ; XML-style tag delimiters
+   "@tag" {:fg :light_red}
+   "@tag.builtin" {:fg :red}
+   "@tag.attribute" {:fg :yellow}
+   "@tag.delimiter" {:fg :white}
    ;; ╭───────────────────────────╮
    ;; │ Non-highlighting captures │
    ;; ╰───────────────────────────╯
-   "@none" {:fg :white :bg :black}    ; completely disable the highlight
+   "@none" {:fg :white :bg :black}
    ;; TODO: Figure out what to do with this
-   "@conceal" {} ; captures that are only meant to be concealed
-   "@spell" {}   ; for defining regions to be spellchecked
-   "@nospell" {} ; for defining regions that should NOT be spellchecked
+   "@conceal" {}
+   "@spell" {}
+   "@nospell" {}
    ;; ╭──────────────────────────────╮
    ;; │ Filetype-specific highlights │
    ;; ╰──────────────────────────────╯
