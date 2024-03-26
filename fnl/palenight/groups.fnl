@@ -57,8 +57,7 @@
    "@function.macro" {:fg :purple :italic true}
    "@function.method" {:fg :blue}
    "@function.method.call" {:fg :blue}
-   ;; TODO: Make sure @constructor is correctly highlighted
-   "@constructor" {:fg :white}
+   "@constructor" {:fg :yellow}
    "@operator" {:fg :purple}
    ;; ╭──────────╮
    ;; │ Keywords │
