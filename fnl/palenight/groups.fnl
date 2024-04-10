@@ -18,7 +18,7 @@
    "@variable.parameter.builtin" {:fg :orange}
    "@variable.member" {:fg :cyan}
    "@constant" {:fg :cyan}
-   "@constant.builtin" {:fg :cyan}
+   "@constant.builtin" {:fg :orange}
    "@constant.macro" {:fg :purple}
    "@module" {:fg :blue_purple}
    "@module.builtin" {:fg :blue_purple}
