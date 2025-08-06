@@ -161,6 +161,7 @@
    "@lsp.type.interface" {:link "@type"}
    "@lsp.type.decorator" {:link "@type"}
    "@lsp.type.property" {:link "@property"}
+   "@lsp.type.member" {:link "@property"}
    "@lsp.type.function" {:link "@function"}
    "@lsp.type.comment" {:link "@comment"}
    "@lsp.type.class" {:link "@type"}
