@@ -186,6 +186,8 @@
    ;; (JS/TS) Builtin objects (Object, Array, etc.)
    "@lsp.typemod.class.defaultLibrary.javascript" {:link "@type.builtin"}
    "@lsp.typemod.class.defaultLibrary.typescript" {:link "@type.builtin"}
+   ;; Java keywords
+   "@lsp.type.modifier.java" {:link "@keyword"}
    ;; ╔══════════════════════════════════════════════════════════╗
    ;; ║                  Built-in syntax groups                  ║
    ;; ╚══════════════════════════════════════════════════════════╝
