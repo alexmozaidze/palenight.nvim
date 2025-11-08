@@ -17,10 +17,7 @@ Dark palenight colorscheme written in [Fennel][fennel] with full support for:
 
 ## Requirements
 
-Neovim >=0.8 and the following option set:
-```lua
-vim.opt.background = "dark"
-```
+Neovim >=0.8
 
 ## Installation
 
