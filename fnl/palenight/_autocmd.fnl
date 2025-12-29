@@ -1,6 +1,3 @@
-;;; NOTE: This file is not used anywhere. I kinda just wrote it and had no use for it when
-;;; I realized it wasn't needed in the end.
-
 (local group (vim.api.nvim_create_augroup "palenight.nvim" {}))
 
 (λ array-of-strings? [tbl]
