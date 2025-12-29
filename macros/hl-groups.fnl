@@ -1,10 +1,10 @@
 (local {: cterm256? : color-constant? : NONE?} (require :checks))
 
-(lambda first-letter-uppercase? [?input]
+(λ first-letter-uppercase? [?input]
   (and ?input
        (string.match (string.sub ?input 1 1) "%u")))
 
-(lambda color-constant?* [?input]
+(λ color-constant?* [?input]
   (and ?input
        (or (cterm256? ?input)
            (and (or (color-constant? ?input)
@@ -13,14 +13,14 @@
 
 (local M {})
 
-(lambda M.transform-gui-color [colors ?target]
+(λ M.transform-gui-color [colors ?target]
   (if (not ?target)
       nil
       (color-constant?* ?target)
       ?target
       `(. ,colors ,?target)))
 
-(lambda M.transform-cterm-color [colors-cterm ?gui ?target]
+(λ M.transform-cterm-color [colors-cterm ?gui ?target]
   (if (and (not ?gui) (not ?target))
       nil
       (color-constant?* ?target)
@@ -31,7 +31,7 @@
       ?target
       `(. ,colors-cterm ,?target)))
 
-(lambda M.transform-hl-groups [colors colors-cterm groups]
+(λ M.transform-hl-groups [colors colors-cterm groups]
   "Takes colors (fg, bg, ctermfg, ctermbg) and de-aliases them.
   In addition to de-aliasing, it assigns default color to
   cterm colors (ctermfg and ctermbg) in case they weren't defined.

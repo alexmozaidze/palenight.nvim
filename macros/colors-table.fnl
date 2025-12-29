@@ -25,7 +25,7 @@
                :cursor
                :vertsplit])
 
-(lambda M.color-table-validate [color-table predicates]
+(λ M.color-table-validate [color-table predicates]
   (assert-compile (table? predicates)
                   (.. "expected table, got " (type predicates))
                   predicates)
@@ -51,13 +51,13 @@
                     color))
   color-table)
 
-(lambda M.color-table-validate/truecolor [color-table]
+(λ M.color-table-validate/truecolor [color-table]
   (M.color-table-validate color-table [hex? color-constant? NONE? cterm256?]))
 
-(lambda M.color-table-validate/cterm256 [color-table]
+(λ M.color-table-validate/cterm256 [color-table]
   (M.color-table-validate color-table [color-constant? NONE? cterm256?]))
 
-(lambda M.color-table-validate/cterm16 [color-table]
+(λ M.color-table-validate/cterm16 [color-table]
   (M.color-table-validate color-table [color-constant? NONE? cterm16?]))
 
 M

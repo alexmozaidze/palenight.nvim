@@ -89,7 +89,7 @@ Dummy example:
 ```fnl
 (local {: mooify} (require :cow))
 
-(lambda string->cow [input]
+(λ string->cow [input]
   (assert (= (type input) :string))
   (mooify input))
 
@@ -97,7 +97,7 @@ Dummy example:
 
 (set M.string_to_cow string->cow)
 
-(lambda M.moo []
+(λ M.moo []
   (print "Moo!"))
 
 M

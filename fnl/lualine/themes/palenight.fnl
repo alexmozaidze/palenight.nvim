@@ -10,13 +10,13 @@
              colors
              colors-cterm))
 
-(lambda active-mode-bg []
+(λ active-mode-bg []
   (if (= opts.cterm_palette 16)
       c.black
       c.menu))
 
 ;; Bold doesn't look great in tty
-(lambda get-bold []
+(λ get-bold []
   (if (not= opts.cterm_palette 16)
       :bold
       nil))

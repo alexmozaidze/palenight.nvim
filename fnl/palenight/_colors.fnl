@@ -1,6 +1,6 @@
 (local M {})
 
-(lambda M.auto-cterm-palette []
+(λ M.auto-cterm-palette []
   "Returns 16 if in tty, and 256 otherwise."
   (let [exec #(= (os.execute $) 0)
         command-exists? #(= (vim.fn.executable $) 1)
@@ -20,7 +20,7 @@
         16
         256)))
 
-(lambda M.require-cterm [?palette]
+(λ M.require-cterm [?palette]
   (let [notify (require :palenight/_notify)
         {: opts} (require :palenight/_config)
         palette (or ?palette opts.cterm_palette)]

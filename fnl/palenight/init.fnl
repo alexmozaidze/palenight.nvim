@@ -6,7 +6,7 @@
 
 (set M.setup config.setup)
 
-(lambda M.load []
+(λ M.load []
   (when (not (supported-nvim-version?))
     (notify-warn messages.unsupported-nvim-version))
   (when vim.g.colors_name
