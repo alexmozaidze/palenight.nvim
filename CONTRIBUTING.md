@@ -1,3 +1,7 @@
+[colors-schema]: macros/colors-table.fnl#L6
+[fennel-style-guide]: https://fennel-lang.org/style
+[discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
+
 # Contributing
 
 ## Building
@@ -126,16 +130,6 @@ Once you've matched all the colors, you can safely run `make` to test out your c
 
 ## Most important part...
 
-<div align="center">
-
 **Don't be afraid to ask!**
 
-</div>
-
-You can always ask about anything in [discussions][discussions], propose a change before starting to work on it, or just to get help.
-
-Thanks for reading, and happy coding!
-
-[colors-schema]: macros/colors-table.fnl#L6
-[fennel-style-guide]: https://fennel-lang.org/style
-[discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
+You can always ask about anything in [discussions][discussions], be it proposing a change before starting to work on it, or just to get help.

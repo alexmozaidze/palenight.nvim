@@ -1,3 +1,22 @@
+[discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
+[nvim-cmp]: https://github.com/hrsh7th/nvim-cmp
+[marks]: https://github.com/chentoast/marks.nvim
+[plugins-section]: fnl/palenight/groups.fnl#L421
+[fennel]: https://fennel-lang.org/
+[modicator]: https://github.com/mawkler/modicator.nvim
+[hlslens]: https://github.com/kevinhwang91/nvim-hlslens
+[hlargs]: https://github.com/m-demare/hlargs.nvim
+[ibl]: https://github.com/lukas-reineke/indent-blankline.nvim
+[gitsigns]: https://github.com/lewis6991/gitsigns.nvim
+[rainbow-delimiters]: https://gitlab.com/HiPhish/rainbow-delimiters.nvim
+[lualine]: https://github.com/nvim-lualine/lualine.nvim
+[tree-sitter]: https://github.com/nvim-treesitter/nvim-treesitter
+[colors]: fnl/palenight/colors/truecolor.fnl
+[original-work]: https://github.com/drewtempelmeyer/palenight.vim
+[vimplug]: https://github.com/junegunn/vim-plug
+[firaCode]: https://github.com/tonsky/FiraCode
+[Neovide]: https://neovide.dev/
+
 <div align="center">
 
 # palenight.nvim
@@ -13,11 +32,12 @@ Dark palenight colorscheme written in [Fennel][fennel] with full support for:
 - Tree-sitter
 - LSP *(including semantic highlighting)*
 - True-color, 256 and 16 color palette terminals
+- GUIs (like [Neovide])
 - And [lots of plugins!](#plugin-support)
 
 ## Requirements
 
-Neovim >=0.8
+Neovim >=0.8, though, latest one is recommended.
 
 ## Installation
 
@@ -49,7 +69,7 @@ vim.cmd.colorscheme "palenight"
 ## Setup options
 
 > [!NOTE]\
-> Setup is completely optional, you only need it to set options. Plugin loads by itself when you set colorscheme.
+> Setup is completely optional, you only need it to set options. Plugin loads by itself when you set the colorscheme.
 
 Here are the default options:
 ```lua
@@ -71,7 +91,7 @@ Here are the default options:
 
 ## Plugin support
 
-Many plugins are supported, the most important ones being:
+Many plugins are supported, including:
 - [lualine.nvim][lualine]
 - [rainbow-delimiters.nvim][rainbow-delimiters]
 - [gitsigns.nvim][gitsigns]
@@ -88,7 +108,7 @@ If you have a plugin that isn't supported, feel free to file an issue or make a 
 
 ## Overriding colors
 
-Neovim already has an easy way of overriding colors of a colorscheme. Here's an example!
+Neovim already has an easy way of overriding colors of a colorscheme. Here's an example.
 
 ```lua
 local colors = require "palenight/colors/truecolor"
@@ -111,7 +131,7 @@ Also check out `:help nvim_set_hl()` and `:help nvim_create_autocmd()`.
 
 ---
 
-If you want to change the *internal* color/group table - you can, but I don't know why you'd want this. Here's an example using Lazy:
+If you want to change the *internal* color/group table - you can! Here's an example using Lazy:
 ```lua
 {
    "alexmozaidze/palenight.nvim",
@@ -127,15 +147,15 @@ If you want to change the *internal* color/group table - you can, but I don't kn
 ```
 
 > [!IMPORTANT]\
-> The order in which you require these modules is important. Require colors before requiring groups.
+> The order in which you require these modules is important. Require and set the colors before requiring groups.
 
 It's not recommended you modify the internals, but you can, and no one can stop you.
 
 ### Transparency
 
 If you want transparency (which only works nicely if your terminal background color matches this theme's), you can use the above method like so:
-```lua
 
+```lua
 {
    "alexmozaidze/palenight.nvim",
    init = function()
@@ -147,22 +167,4 @@ If you want transparency (which only works nicely if your terminal background co
 
 ## Questions? Need help?
 
-Hop over on [discussions][discussions] and ask away!
-
-[discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
-[nvim-cmp]: https://github.com/hrsh7th/nvim-cmp
-[marks]: https://github.com/chentoast/marks.nvim
-[plugins-section]: fnl/palenight/groups.fnl#L421
-[fennel]: https://fennel-lang.org/
-[modicator]: https://github.com/mawkler/modicator.nvim
-[hlslens]: https://github.com/kevinhwang91/nvim-hlslens
-[hlargs]: https://github.com/m-demare/hlargs.nvim
-[ibl]: https://github.com/lukas-reineke/indent-blankline.nvim
-[gitsigns]: https://github.com/lewis6991/gitsigns.nvim
-[rainbow-delimiters]: https://gitlab.com/HiPhish/rainbow-delimiters.nvim
-[lualine]: https://github.com/nvim-lualine/lualine.nvim
-[tree-sitter]: https://github.com/nvim-treesitter/nvim-treesitter
-[colors]: fnl/palenight/colors/truecolor.fnl
-[original-work]: https://github.com/drewtempelmeyer/palenight.vim
-[vimplug]: https://github.com/junegunn/vim-plug
-[firaCode]: https://github.com/tonsky/FiraCode
+If you need help with the plugin you can ask any questions on [discussions][discussions].
