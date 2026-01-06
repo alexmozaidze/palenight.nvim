@@ -131,6 +131,20 @@ If you want to change the *internal* color/group table - you can, but I don't kn
 
 It's not recommended you modify the internals, but you can, and no one can stop you.
 
+### Transparency
+
+If you want transparency (which only works nicely if your terminal background color matches this theme's), you can use the above method like so:
+```lua
+
+{
+   "alexmozaidze/palenight.nvim",
+   init = function()
+      local groups = require "palenight/groups"
+      groups["Normal"] = { ctermbg = "none", ctermfg = "none", fg = "none", bg = "none" }
+   end,
+}
+```
+
 ## Questions? Need help?
 
 Hop over on [discussions][discussions] and ask away!
