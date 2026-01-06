@@ -420,6 +420,11 @@
    ;; ╭──────────────────────────────────────────────────────────╮
    ;; │                   Plugin highlighting                    │
    ;; ╰──────────────────────────────────────────────────────────╯
+   ;; ╭──────────────────────╮
+   ;; │ rcarriga/nvim-notify │
+   ;; ╰──────────────────────╯
+   ;; NOTE: Must be the same as Normal, but without using :link
+   :NotifyBackground {:fg :white :bg :black}
    ;; ╭───────────────────╮
    ;; │ mhinz/vim-signify │
    ;; ╰───────────────────╯
