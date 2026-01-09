@@ -16,6 +16,7 @@
 [vimplug]: https://github.com/junegunn/vim-plug
 [firaCode]: https://github.com/tonsky/FiraCode
 [Neovide]: https://neovide.dev/
+[xiyaowong/transparent.nvim]: https://github.com/xiyaowong/transparent.nvim
 
 <div align="center">
 
@@ -40,9 +41,6 @@ Dark palenight colorscheme written in [Fennel][fennel] with full support for:
 Neovim >=0.8, though, latest one is recommended.
 
 ## Installation
-
-> [!IMPORTANT]\
-> If you are using an old version of nvim-treesitter (the one which uses an old capture naming scheme), pin palenight.nvim to `old-naming-scheme` tag.
 
 <details><summary>Lazy</summary>
 
@@ -104,11 +102,11 @@ Many plugins are supported, including:
 
 For full list of supported plugins, see [groups.fnl][plugins-section].
 
-If you have a plugin that isn't supported, feel free to file an issue or make a pull request!
+If you have a plugin that isn't supported, feel free to file an issue or make a pull request.
 
 ## Overriding colors
 
-Neovim already has an easy way of overriding colors of a colorscheme. Here's an example.
+<details><summary>Overriding colors</summary>
 
 ```lua
 local colors = require "palenight/colors/truecolor"
@@ -129,13 +127,17 @@ autocmd("ColorScheme", {
 For list of available colors check out [colors/truecolor.fnl][colors].\
 Also check out `:help nvim_set_hl()` and `:help nvim_create_autocmd()`.
 
----
+</details>
 
-If you want to change the *internal* color/group table - you can! Here's an example using Lazy:
+<details><summary>Overriding internal colors and groups</summary>
+
 ```lua
 {
    "alexmozaidze/palenight.nvim",
    init = function()
+      -- WARN: The order in which you require these modules is important.
+      --       Require and set the colors before requiring groups.
+
       -- Changing internal colors
       local colors = require "palenight/colors/truecolor"
       colors.comment = "#ff00ff"
@@ -146,14 +148,17 @@ If you want to change the *internal* color/group table - you can! Here's an exam
 }
 ```
 
-> [!IMPORTANT]\
-> The order in which you require these modules is important. Require and set the colors before requiring groups.
+</details>
 
-It's not recommended you modify the internals, but you can, and no one can stop you.
+## Transparency
 
-### Transparency
+Use [xiyaowong/transparent.nvim]
 
-If you want transparency (which only works nicely if your terminal background color matches this theme's), you can use the above method like so:
+or...
+
+If you want to do transparency yourself, you can override the `Normal` color to be cleared. However, keep in mind that [xiyaowong/transparent.nvim] is more convenient and is more complete. It covers more highlight colors and has commands to toggle transparency.
+
+<details><summary>Manual transparency example</summary>
 
 ```lua
 {
@@ -164,6 +169,8 @@ If you want transparency (which only works nicely if your terminal background co
    end,
 }
 ```
+
+</details>
 
 ## Questions? Need help?
 
