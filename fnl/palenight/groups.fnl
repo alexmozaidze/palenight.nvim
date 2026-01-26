@@ -185,8 +185,10 @@
    ;; (JS/TS) Builtin objects (Object, Array, etc.)
    "@lsp.typemod.class.defaultLibrary.javascript" {:link "@type.builtin"}
    "@lsp.typemod.class.defaultLibrary.typescript" {:link "@type.builtin"}
-   ;; Java keywords
+   ;; (Java) keywords
    "@lsp.type.modifier.java" {:link "@keyword"}
+   ;; (Clojure) keywords
+   "@lsp.type.keyword.clojure" {:link "@string.special.symbol"}
    ;; ╔══════════════════════════════════════════════════════════╗
    ;; ║                  Built-in syntax groups                  ║
    ;; ╚══════════════════════════════════════════════════════════╝
