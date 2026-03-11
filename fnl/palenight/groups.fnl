@@ -189,6 +189,10 @@
    "@lsp.type.modifier.java" {:link "@keyword"}
    ;; (Clojure) keywords
    "@lsp.type.keyword.clojure" {:link "@string.special.symbol"}
+   ;; (Clojure) built-in variables
+   "@lsp.typemod.variable.defaultLibrary.clojure" {:link "@variable.builtin"}
+   ;; (Rust) conditionals
+   "@lsp.mod.controlFlow.rust" {:link "@keyword.conditional"}
    ;; ╔══════════════════════════════════════════════════════════╗
    ;; ║                  Built-in syntax groups                  ║
    ;; ╚══════════════════════════════════════════════════════════╝

@@ -1,7 +1,7 @@
 [discussions]: https://github.com/alexmozaidze/palenight.nvim/discussions
 [nvim-cmp]: https://github.com/hrsh7th/nvim-cmp
 [marks]: https://github.com/chentoast/marks.nvim
-[plugins-section]: fnl/palenight/groups.fnl#L423
+[plugins-section]: fnl/palenight/groups.fnl#L427
 [fennel]: https://fennel-lang.org/
 [modicator]: https://github.com/mawkler/modicator.nvim
 [hlslens]: https://github.com/kevinhwang91/nvim-hlslens
