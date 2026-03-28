@@ -426,6 +426,25 @@
    ;; ╭──────────────────────────────────────────────────────────╮
    ;; │                   Plugin highlighting                    │
    ;; ╰──────────────────────────────────────────────────────────╯
+   ;; ╭───────────────────────────────────────────╮
+   ;; │ MeanderingProgrammer/render-markdown.nvim │
+   ;; ╰───────────────────────────────────────────╯
+   :RenderMarkdownH1   {:fg :yellow}
+   :RenderMarkdownH2   {:fg :orange}
+   :RenderMarkdownH3   {:fg :blue}
+   :RenderMarkdownH4   {:fg :cyan}
+   :RenderMarkdownH5   {:fg :green}
+   :RenderMarkdownH6   {:fg :purple}
+   :RenderMarkdownH1Bg {:link "RenderMarkdownH1"}
+   :RenderMarkdownH2Bg {:link "RenderMarkdownH2"}
+   :RenderMarkdownH3Bg {:link "RenderMarkdownH3"}
+   :RenderMarkdownH4Bg {:link "RenderMarkdownH4"}
+   :RenderMarkdownH5Bg {:link "RenderMarkdownH5"}
+   :RenderMarkdownH6Bg {:link "RenderMarkdownH6"}
+   :RenderMarkdownCode {:bg :menu}
+   :RenderMarkdownCodeInfo {:link "@type"}
+   :RenderMarkdownCodeFallback {:fg :blue_purple}
+   :RenderMarkdownBullet {:fg :purple}
    ;; ╭──────────────────────╮
    ;; │ rcarriga/nvim-notify │
    ;; ╰──────────────────────╯
