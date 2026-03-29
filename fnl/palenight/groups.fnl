@@ -423,9 +423,9 @@
    :gitcommitDiscardedArrow {:link :gitcommitDiscardedFile}
    :gitcommitSelectedArrow {:link :gitcommitSelectedFile}
    :gitcommitUnmergedArrow {:link :gitcommitUnmergedFile}
-   ;; ╭──────────────────────────────────────────────────────────╮
-   ;; │                   Plugin highlighting                    │
-   ;; ╰──────────────────────────────────────────────────────────╯
+   ;; ╔══════════════════════════════════════════════════════════╗
+   ;; ║                   Plugin highlighting                    ║
+   ;; ╚══════════════════════════════════════════════════════════╝
    ;; ╭───────────────────────────────────────────╮
    ;; │ MeanderingProgrammer/render-markdown.nvim │
    ;; ╰───────────────────────────────────────────╯
