@@ -445,6 +445,7 @@
    :RenderMarkdownCodeInfo {:link "@type"}
    :RenderMarkdownCodeFallback {:fg :blue_purple}
    :RenderMarkdownBullet {:fg :purple}
+   :RenderMarkdownInfo {:fg :blue}
    ;; ╭──────────────────────╮
    ;; │ rcarriga/nvim-notify │
    ;; ╰──────────────────────╯
