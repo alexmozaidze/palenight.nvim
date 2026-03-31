@@ -100,6 +100,12 @@
    "@markup.strikethrough" {:strikethrough true}
    "@markup.underline" {:underline true}
    "@markup.heading" {:fg :yellow :bold true}
+   "@markup.heading.1" {:fg :yellow}
+   "@markup.heading.2" {:fg :orange}
+   "@markup.heading.3" {:fg :blue}
+   "@markup.heading.4" {:fg :cyan}
+   "@markup.heading.5" {:fg :green}
+   "@markup.heading.6" {:fg :purple}
    "@markup.quote" {:fg :white}
    "@markup.math" {:fg :blue}
    "@markup.link" {:fg :cyan}
@@ -429,12 +435,12 @@
    ;; ╭───────────────────────────────────────────╮
    ;; │ MeanderingProgrammer/render-markdown.nvim │
    ;; ╰───────────────────────────────────────────╯
-   :RenderMarkdownH1   {:fg :yellow}
-   :RenderMarkdownH2   {:fg :orange}
-   :RenderMarkdownH3   {:fg :blue}
-   :RenderMarkdownH4   {:fg :cyan}
-   :RenderMarkdownH5   {:fg :green}
-   :RenderMarkdownH6   {:fg :purple}
+   :RenderMarkdownH1   {:link "@markup.heading.1"}
+   :RenderMarkdownH2   {:link "@markup.heading.2"}
+   :RenderMarkdownH3   {:link "@markup.heading.3"}
+   :RenderMarkdownH4   {:link "@markup.heading.4"}
+   :RenderMarkdownH5   {:link "@markup.heading.5"}
+   :RenderMarkdownH6   {:link "@markup.heading.6"}
    :RenderMarkdownH1Bg {:link "RenderMarkdownH1"}
    :RenderMarkdownH2Bg {:link "RenderMarkdownH2"}
    :RenderMarkdownH3Bg {:link "RenderMarkdownH3"}
