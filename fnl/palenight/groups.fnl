@@ -111,7 +111,7 @@
    "@markup.link" {:fg :cyan}
    "@markup.link.label" {:fg :blue}
    "@markup.link.url" {:underline true}
-   "@markup.raw" {:fg :blue_purple}
+   "@markup.raw" {:fg :blue_purple :bg :menu}
    "@markup.raw.block" {:fg :green}
    "@markup.list" {:fg :purple}
    "@markup.list.checked" {:fg :green}
@@ -448,6 +448,7 @@
    :RenderMarkdownH5Bg {:link "RenderMarkdownH5"}
    :RenderMarkdownH6Bg {:link "RenderMarkdownH6"}
    :RenderMarkdownCode {:bg :menu}
+   :RenderMarkdownCodeInline {:link "@markup.raw"}
    :RenderMarkdownCodeInfo {:link "@type"}
    :RenderMarkdownCodeFallback {:fg :blue_purple}
    :RenderMarkdownBullet {:fg :purple}
