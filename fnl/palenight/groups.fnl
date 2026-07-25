@@ -280,6 +280,8 @@
    :SpellRare {:fg :orange}
    :StatusLine {:fg :white :bg :menu}
    :StatusLineNC {:fg :comment}
+   :WinBar {:fg :white :bg :black}
+   :WinBarNC {:fg :comment :bg :black}
    :TabLine {:fg :comment}
    :TabLineFill {}
    :TabLineSel {:fg :white}
@@ -582,4 +584,150 @@
    :InsertMode {:fg :blue}
    :VisualMode {:fg :cyan}
    :SelectMode {:fg :cyan}
-   :ReplaceMode {:fg :green}})
+   :ReplaceMode {:fg :green}
+   ;; ╭────────────────────────╮
+   ;; │ Bekaboo/dropbar.nvim   │
+   ;; ╰────────────────────────╯
+   :DropBarCurrentContext {:link "Visual"}
+   :DropBarCurrentContextIcon {:link "DropBarCurrentContext"}
+   :DropBarCurrentContextName {:link "DropBarCurrentContext"}
+   :DropBarFzfMatch {:link "Special"}
+   :DropBarHover {:link "Visual"}
+   :DropBarPreview {:link "Visual"}
+   ;; Icon defaults
+   :DropBarIconKindDefault {:link "Special"}
+   :DropBarIconKindDefaultNC {:link "WinBarNC"}
+   ;; Icon UIs
+   :DropBarIconUIIndicator {:link "SpecialChar"}
+   :DropBarIconUIPickPivot {:link "Error"}
+   :DropBarIconUISeparator {:link "Comment"}
+   :DropBarIconUISeparatorMenu {:link "DropBarIconUISeparator"}
+   ;; Menu
+   :DropBarMenuCurrentContext {:link "PmenuSel"}
+   :DropBarMenuFloatBorder {:link "FloatBorder"}
+   :DropBarMenuHoverEntry {:link "IncSearch"}
+   :DropBarMenuHoverIcon {:reverse true}
+   :DropBarMenuHoverSymbol {:bold true}
+   :DropBarMenuNormalFloat {:link "NormalFloat"}
+   :DropBarMenuSbar {:link "PmenuSbar"}
+   :DropBarMenuThumb {:link "PmenuThumb"}
+   ;; Icon kinds
+   :DropBarIconKindArray {:link "@type"}
+   :DropBarIconKindBoolean {:link "@boolean"}
+   :DropBarIconKindClass {:link "@lsp.type.class"}
+   :DropBarIconKindConstant {:link "@constant"}
+   :DropBarIconKindConstructor {:link "@constructor"}
+   :DropBarIconKindEnum {:link "@lsp.type.enum"}
+   :DropBarIconKindEnumMember {:link "@lsp.type.enumMember"}
+   :DropBarIconKindEvent {:link "@type"}
+   :DropBarIconKindField {:link "@variable.member"}
+   :DropBarIconKindFile {:fg :dark_green}
+   :DropBarIconKindFolder {:fg :green}
+   :DropBarIconKindFunction {:link "@lsp.type.function"}
+   :DropBarIconKindInterface {:link "@lsp.type.interface"}
+   :DropBarIconKindKeyword {:link "@keyword"}
+   :DropBarIconKindMethod {:link "@lsp.type.method"}
+   :DropBarIconKindModule {:link "@lsp.type.namespace"}
+   :DropBarIconKindNamespace {:link "@module"}
+   :DropBarIconKindNull {:link "@constant.builtin"}
+   :DropBarIconKindNumber {:link "@number"}
+   :DropBarIconKindObject {:link "@type"}
+   :DropBarIconKindOperator {:link "@operator"}
+   :DropBarIconKindPackage {:link "@module"}
+   :DropBarIconKindProperty {:link "@lsp.type.property"}
+   :DropBarIconKindString {:link "@string"}
+   :DropBarIconKindStruct {:link "@lsp.type.struct"}
+   :DropBarIconKindTerminal {:fg :purple}
+   :DropBarIconKindText {:link "Normal"}
+   :DropBarIconKindTypeParameter {:link "@lsp.type.parameter"}
+   :DropBarIconKindVariable {:link "@lsp.type.variable"}
+   ;; Icon kinds (non-current)
+   :DropBarIconKindArrayNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindBooleanNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindClassNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindConstantNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindConstructorNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindEnumNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindEnumMemberNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindEventNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindFieldNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindFileNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindFolderNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindFunctionNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindInterfaceNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindKeywordNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindMethodNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindModuleNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindNamespaceNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindNullNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindNumberNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindObjectNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindOperatorNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindPackageNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindPropertyNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindStringNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindStructNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindTerminalNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindTextNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindTypeParameterNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarIconKindVariableNC {:link "DropBarIconKindDefaultNC"}
+   ;; Name kinds
+   :DropBarKindArray {:link "@type"}
+   :DropBarKindBoolean {:link "@boolean"}
+   :DropBarKindClass {:link "@lsp.type.class"}
+   :DropBarKindConstant {:link "@constant"}
+   :DropBarKindConstructor {:link "@constructor"}
+   :DropBarKindEnum {:link "@lsp.type.enum"}
+   :DropBarKindEnumMember {:link "@lsp.type.enumMember"}
+   :DropBarKindEvent {:link "@type"}
+   :DropBarKindField {:link "@variable.member"}
+   :DropBarKindFile {:fg :dark_green}
+   :DropBarKindFolder {:fg :green}
+   :DropBarKindFunction {:link "@lsp.type.function"}
+   :DropBarKindInterface {:link "@lsp.type.interface"}
+   :DropBarKindKeyword {:link "@keyword"}
+   :DropBarKindMethod {:link "@lsp.type.method"}
+   :DropBarKindModule {:link "@lsp.type.namespace"}
+   :DropBarKindNamespace {:link "@module"}
+   :DropBarKindNull {:link "@constant.builtin"}
+   :DropBarKindNumber {:link "@number"}
+   :DropBarKindObject {:link "@type"}
+   :DropBarKindOperator {:link "@operator"}
+   :DropBarKindPackage {:link "@module"}
+   :DropBarKindProperty {:link "@lsp.type.property"}
+   :DropBarKindString {:link "@string"}
+   :DropBarKindStruct {:link "@lsp.type.struct"}
+   :DropBarKindTerminal {:fg :purple}
+   :DropBarKindText {:link "Normal"}
+   :DropBarKindTypeParameter {:link "@lsp.type.parameter"}
+   :DropBarKindVariable {:link "@lsp.type.variable"}
+   ;; Name kinds (non-current)
+   :DropBarKindArrayNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindBooleanNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindClassNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindConstantNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindConstructorNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindEnumNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindEnumMemberNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindEventNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindFieldNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindFileNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindFolderNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindFunctionNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindInterfaceNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindKeywordNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindMethodNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindModuleNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindNamespaceNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindNullNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindNumberNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindObjectNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindOperatorNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindPackageNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindPropertyNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindStringNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindStructNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindTerminalNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindTextNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindTypeParameterNC {:link "DropBarIconKindDefaultNC"}
+   :DropBarKindVariableNC {:link "DropBarIconKindDefaultNC"}})
